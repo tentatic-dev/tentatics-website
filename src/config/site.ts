@@ -1,10 +1,10 @@
 export const siteConfig = {
-    name: "Your Template",
-    url: "https://yourname.com",
-    username: "yourname",
+    name: "Tentatics",
+    url: "https://tentatics.com",
+    username: "tentatics_user",
     year: "2025",
     description: "A Template for your website with Nextjs, DaisyUI, Analytics, and SEO.",
-    author: "Your Name",
+    author: "Peter Shaan",
     location: "Jakarta, Indonesia",
     social: {
         email: "mailto:hello@yourname.com",

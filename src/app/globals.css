@@ -24,8 +24,21 @@ for more information, visit https://daisyui.com/theme-generator/ */
 
 @theme inline {
   --font-sans: var(--font-inter);
+  --color-accent-dark: var(--color-accent-dark);
+  --color-highlight: var(--color-highlight);
+  --color-primary-dark: var(--color-primary-dark);
 }
 
 body {
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+
+/* Tambahkan ini untuk kelas gradient text */
+.text-gradient-highlight {
+  background: linear-gradient(90deg, #FFFFFF 0%, var(--color-highlight) 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }

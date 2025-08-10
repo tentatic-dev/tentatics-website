@@ -9,6 +9,7 @@ import {
   GoogleTagManager,
   GoogleTagManagerNoScript,
 } from "@/components/analytics";
+import Footer from "@/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <GoogleTagManagerNoScript />
         {children}
+        <Footer />
         <GoogleAnalytics />
       </body>
     </html>
