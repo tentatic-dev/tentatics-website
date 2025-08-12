@@ -5,7 +5,7 @@ import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 export default function Discover() {
   return (
-    <section className="grid md:grid-cols-2 grid-cols-1 gap-10 container px-32 py-16 ">
+    <section className="grid md:grid-cols-2 grid-cols-1 gap-10 container px-32 py-16 items-center">
       <div className="">
         <div>
           <h1 className="text-4xl font-bold">
@@ -47,7 +47,24 @@ export default function Discover() {
         </Link>
       </div>
       <div className="flex justify-center">
-        <div className="bg-gradient-to-tr from-slate-200 to-slate-300 p-6 rounded-lg w-[386px] shadow-2xl">
+        {/* Card content */}
+        <div className="bg-gradient-to-tr from-slate-200 to-slate-300 p-6 rounded-lg w-[386px] shadow-2xl relative z-10">
+          <div
+            className="absolute -right-6 -top-8 w-20 h-20 rounded-2xl"
+            style={{
+              background: "linear-gradient(135deg, #42e695 0%, #3bb2b8 100%)",
+              boxShadow: "0 6px 20px 0 rgba(0, 0, 0, 0.5)",
+              zIndex: 0,
+              rotate: "25deg",
+            }}
+          >
+            <div
+              className="absolute inset-0 m-auto w-12 h-12 rounded-xl"
+              style={{
+                background: "rgba(255,255,255,0.25)",
+              }}
+            />
+          </div>
           <h3 className="text-2xl text-center font-bold">Sorotan Proyek</h3>
           <div className="grid grid-cols-2 mt-10 gap-10">
             <div>

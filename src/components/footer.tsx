@@ -176,16 +176,16 @@ export default function Footer() {
                 {/* Social Media */}
                 <div className="flex gap-10">
                   <Link href="#" className=" transition-colors">
-                    <FaLinkedin className="text-3xl" />
+                    <FaLinkedin className="text-2xl" />
                   </Link>
                   <Link href="#" className=" transition-colors">
-                    <FaTwitter className="text-3xl" />
+                    <FaTwitter className="text-2xl" />
                   </Link>
                   <Link href="#" className=" transition-colors">
-                    <FaFacebook className="text-3xl" />
+                    <FaFacebook className="text-2xl" />
                   </Link>
                   <Link href="#" className=" transition-colors">
-                    <FaInstagram className="text-3xl" />
+                    <FaInstagram className="text-2xl" />
                   </Link>
                 </div>
               </li>
@@ -194,7 +194,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Bottom Section */}
-      <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between container mx-auto px-4 md:px-8 lg:px-32 py-12 items-center gap-4">
+      <div className="border-t border-white/20 mt-12 py-4 flex flex-col md:flex-row justify-between container mx-auto px-4 md:px-8 lg:px-32 items-center gap-4">
         <p className="text-gray-300 text-sm">
           © 2025 Tentatics, All Right reserverd
         </p>
