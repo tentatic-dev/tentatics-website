@@ -5,15 +5,81 @@ import FadeSlider from "./fade-slider";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlinePlayCircle } from "react-icons/md";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export default function Banner() {
+  const bannerRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const exploreRef = useRef<HTMLDivElement>(null);
+
   const imgs = [
     "/landing/landing-1.png",
     "/landing/landing-2.png",
     "/landing/landing-3.png",
   ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        titleRef.current,
+        {
+          opacity: 0,
+          y: 50,
+          scale: 0.9,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1.2,
+          ease: "power3.out",
+        }
+      );
+
+      // Fade in untuk suggestion buttons
+      tl.fromTo(
+        buttonsRef.current?.children || [],
+        {
+          opacity: 0,
+          x: -20,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+        },
+        "-=0.4"
+      );
+
+      // Bounce in untuk explore section
+      tl.fromTo(
+        exploreRef.current,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "bounce.out",
+        },
+        "-=0.3"
+      );
+    }, bannerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section
+      ref={bannerRef}
       id="banner"
       className="min-h-dvh w-full flex flex-col items-center justify-around px-6 pt-6 relative overflow-hidden"
     >
@@ -21,7 +87,10 @@ export default function Banner() {
       <FadeSlider images={imgs} intervalMs={5000} fadeMs={800} />
 
       <div className="flex text-white flex-col z-22 items-center gap-5">
-        <h1 className="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg text-gradient-highlight h-16">
+        <h1
+          ref={titleRef}
+          className="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg text-gradient-highlight h-16"
+        >
           Show Better. Sell Quicker. Manage Smarter.
         </h1>
         <div className="flex gap-8">
@@ -74,7 +143,7 @@ export default function Banner() {
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div ref={buttonsRef} className="flex flex-wrap gap-3">
             <button
               type="button"
               className="rounded-full px-3 py-1 bg-[#f1f8a9] text-black/80 shadow text-sm"
@@ -89,7 +158,10 @@ export default function Banner() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-6 mt-8 z-25 text-white">
+        <div
+          ref={exploreRef}
+          className="flex flex-col items-center gap-6 mt-8 z-25 text-white"
+        >
           <Link
             href="/ask"
             className="border border-white rounded-xl px-3 py-2 flex items-center gap-2 text-sm"
