@@ -5,7 +5,7 @@ import FadeSlider from "./fade-slider";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlinePlayCircle } from "react-icons/md";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useTranslations } from "next-intl";
 
@@ -14,6 +14,7 @@ export default function Banner() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const exploreRef = useRef<HTMLDivElement>(null);
+  const [textareaValue, setTextareaValue] = useState("");
   const t = useTranslations("home.banner");
 
   const imgs = [
@@ -79,6 +80,13 @@ export default function Banner() {
     return () => ctx.revert();
   }, []);
 
+  const handleScrollDown = () => {
+    const nextSection = document.querySelector("#discover");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       ref={bannerRef}
@@ -134,6 +142,8 @@ export default function Banner() {
             <textarea
               className="textarea bg-white/15 backdrop-blur-md text-white rounded-2xl w-full h-24 sm:h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base"
               placeholder={t("placeholder")}
+              value={textareaValue}
+              onChange={(e) => setTextareaValue(e.target.value)}
             ></textarea>
 
             <button
@@ -152,12 +162,14 @@ export default function Banner() {
             <button
               type="button"
               className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center"
+              onClick={() => setTextareaValue(t("question1"))}
             >
               {t("question1")}
             </button>
             <button
               type="button"
               className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center"
+              onClick={() => setTextareaValue(t("question2"))}
             >
               {t("question2")}
             </button>
@@ -165,7 +177,7 @@ export default function Banner() {
         </div>
         <div
           ref={exploreRef}
-          className="flex flex-col items-center gap-6 mt-8 z-25 text-white"
+          className="flex flex-col items-center gap-6 mt-8 z-50 text-white"
         >
           <Link
             href="/ask"
@@ -174,12 +186,15 @@ export default function Banner() {
             <MdOutlinePlayCircle className="h-6 w-6" />
             {t("see")}
           </Link>
-          <div className="flex flex-col items-center gap-2">
+          <button
+            onClick={handleScrollDown}
+            className="flex flex-col items-center gap-2 cursor-pointer"
+          >
             <p>{t("more")}</p>
-            <button>
+            <p>
               <IoIosArrowDown className="w-6 h-6" />
-            </button>
-          </div>
+            </p>
+          </button>
         </div>
       </div>
     </section>
