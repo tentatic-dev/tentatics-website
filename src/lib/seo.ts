@@ -24,20 +24,18 @@ export function generateSEO({
   return {
     title: seoTitle,
     description: seoDescription,
-    // Change Keywords to match the new context
-    // This is a photography portfolio, so keywords should reflect that
     keywords: [
-      'photography',
-      'videography',
-      'portfolio',
-      'Timothius Bansole',
-      'Thimmy Story',
-      'photographer',
-      'creative',
-      'visual storytelling',
-      'professional photography',
-      'Bandung',
-      'Indonesia'
+      'proptech',
+      'real estate',
+      'AI',
+      'southeast asia',
+      'property technology',
+      'developers',
+      'agencies',
+      'agents',
+      'tentatics',
+      'indonesia',
+      'jakarta',
     ],
     authors: [
       {

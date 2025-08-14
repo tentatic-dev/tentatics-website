@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -13,39 +14,15 @@ export default function review() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("home.review");
 
-  const review = [
-    "All",
-    "Real estate",
-    "Agencies",
-    "Hospilaty",
-    "Helathcare",
-    "Manufactures",
-    "Government",
-  ];
+  const review = t.raw("item") as string[];
 
-  const client = [
-    {
-      value: "500+",
-      desc: "Klien Puas(dummy)",
-      numValue: 500,
-    },
-    {
-      value: "50+",
-      desc: "Industri Berbeda (dummy)",
-      numValue: 50,
-    },
-    {
-      value: "98%",
-      desc: "Tingkat Kepuasan(dummy)",
-      numValue: 98,
-    },
-    {
-      value: "24/7",
-      desc: "Dukungan Teknis",
-      numValue: 24,
-    },
-  ];
+  const client = t.raw("client") as Array<{
+    value: string;
+    desc: string;
+    numValue: number;
+  }>;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -198,47 +175,54 @@ export default function review() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="bg-primary-dark py-24 flex flex-col text-center gap-12 w-full justify-center"
-    >
-      <div className="flex gap-2 flex-col w-full">
-        <h1 ref={titleRef} className="text-3xl font-bold text-white">
-          Helping Industry Leaders Transform with Technology
-        </h1>
-        <p ref={subtitleRef} className="text-highlight font-light">
-          We help businesses grow with tailored, innovative technology
-          solutions.
-        </p>
-      </div>
-
-      <div ref={buttonsRef} className="flex gap-5 justify-center">
-        {review.map((item, index) => (
-          <button
-            key={index}
-            className="border border-white text-sm text-white py-1 px-5 rounded-lg cursor-pointer hover:bg-white/10 transition-colors hover:scale-105 transform duration-200"
+    <section ref={sectionRef} className="bg-primary-dark py-24">
+      <div className="container mx-auto flex flex-col text-center gap-12 justify-center">
+        <div className="flex gap-2 flex-col w-full">
+          <h1
+            ref={titleRef}
+            className="text-3xl sm:text-4xl font-bold text-white"
           >
-            {item}
-          </button>
-        ))}
-      </div>
+            {t("title")}
+          </h1>
+          <p ref={subtitleRef} className="text-highlight font-light">
+            {t("desc")}
+          </p>
+        </div>
 
-      <div ref={statsRef} className="flex flex-wrap justify-around w-full">
-        {client.map((item, index) => (
-          <div key={index} className="flex flex-col justify-center gap-2 mt-8">
-            <h1 className="stat-value text-3xl text-highlight font-bold">
-              0
-              {item.value.includes("+")
-                ? "+"
-                : item.value.includes("%")
-                ? "%"
-                : item.value.includes("/")
-                ? "/7"
-                : ""}
-            </h1>
-            <p className="stat-desc text-sm text-white">{item.desc}</p>
-          </div>
-        ))}
+        <div ref={buttonsRef} className="flex flex-wrap gap-5 justify-center">
+          {review.map((item, index) => (
+            <button
+              key={index}
+              className="border border-white text-sm text-white py-1 px-5 rounded-lg cursor-pointer hover:bg-white/10 transition-colors hover:scale-105 transform duration-200"
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+
+        <div
+          ref={statsRef}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl mx-auto"
+        >
+          {client.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center gap-2 mt-8"
+            >
+              <h1 className="stat-value text-3xl text-highlight font-bold">
+                0
+                {item.value.includes("+")
+                  ? "+"
+                  : item.value.includes("%")
+                  ? "%"
+                  : item.value.includes("/")
+                  ? "/7"
+                  : ""}
+              </h1>
+              <p className="stat-desc text-sm text-white">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,149 @@
+{
+  "home": {
+    "banner": {
+      "title": "Show Better. Sell Quicker. Manage Smarter.",
+      "360": "360° View",
+      "3D": "3D Design",
+      "AI": "AI Supported",
+      "placeholder": "I want to ask about Tentatics.....",
+      "question1": "Can you evaluate my listing now?",
+      "question2": "How Tentatics help me sell faster?",
+      "see": "See Demo",
+      "more": "Explore More"
+    },
+    "review": {
+      "title": "Helping Industry Leaders Transform with Technology",
+      "desc": "We help businesses grow with tailored, innovative technology solutions.",
+      "item": [
+        "All",
+        "Real estate",
+        "Agencies",
+        "Hospilaty",
+        "Helathcare",
+        "Manufactures",
+        "Government"
+      ],
+      "client": [
+        {
+          "value": "500+",
+          "desc": "Satisfy Client(dummy)",
+          "numValue": 500
+        },
+        {
+          "value": "50+",
+          "desc": "Different Industries (dummy)",
+          "numValue": 50
+        },
+        {
+          "value": "98%",
+          "desc": "Satisfaction Rate (dummy)",
+          "numValue": 98
+        },
+        {
+          "value": "24/7",
+          "desc": "Technical Support",
+          "numValue": 24
+        }
+      ]
+    },
+    "solution": {
+      "title": "Comprehensive Digital Solutions",
+      "desc": "From virtual tours to AI automation, we provide everything you",
+      "desc2": "need for modern property management.",
+      "360": {
+        "title": "360 Virtual Tour",
+        "desc": "Immersive 360° property experiences that engage prospects and accelerate sales decisions."
+      },
+      "ai": {
+        "title": "AI Automation",
+        "desc": "Intelligent agents that handle WhatsApp responses, lead assessment, and task scheduling"
+      },
+      "crm": {
+        "title": "CRM Integration",
+        "desc": "Seamless integration with leading CRM platforms for enhanced client management."
+      }
+    },
+    "project": {
+      "title": "Tentatics Projects",
+      "desc": "See how we help our clients achieve their goals.",
+      "item": [
+        {
+          "image": "/projects/real-estate.jpg",
+          "title": "Real Estate",
+          "desc": "Average reduction in time to close deals",
+          "url": "/real-estate",
+          "color": "#1736FF"
+        },
+        {
+          "image": "/projects/hospitality.jpg",
+          "title": "Hospitality",
+          "desc": "Increased buyer interaction with properties",
+          "url": "/hospitality",
+          "color": "#B917FF"
+        },
+        {
+          "image": "/projects/malls.jpg",
+          "title": "Shopping Mall",
+          "desc": "Higher quality prospects through AI and automation",
+          "url": "/shopping-mall",
+          "color": "#00A23B"
+        },
+        {
+          "image": "/projects/manufacturing.jpg",
+          "title": "Manufacturing",
+          "desc": "Operational savings and process efficiency",
+          "url": "/manufacturing",
+          "color": "#87A200"
+        }
+      ]
+    },
+    "discover": {
+      "title": "Ready to Explore Innovative Projects",
+      "desc": "Connect with fellow developers and innovators across Southeast Asia to explore the latest PropTech solutions and share knowledge.",
+      "features": [
+        "Open source project collaboration",
+        "Technical consultation & guidance",
+        "Innovation workshops & training",
+        "Community-based development"
+      ],
+      "schedule": "Schedule a Call",
+      "card_title": "Project Highlights",
+      "card_item": [
+        { "value": "25", "label": "Completed Projects (sample)" },
+        { "value": "15", "label": "Technologies Used (sample)" },
+        { "value": "3D", "label": "Visualization (sample)" },
+        { "value": "AI", "label": "Innovation" }
+      ],
+      "testimony": "3D visualization projects open new possibilities for property exhibitions.",
+      "testimony_person": "John Doe",
+      "testimony_location": "Jakarta"
+    }
+  },
+  "navbar": {
+    "business": "Business Customers",
+    "about": "About us",
+    "blog": "Blog",
+    "consultation": "Consultation with Us"
+  },
+  "footer": {
+    "desc": "Revolutionizing real estate across Southeast Asia with AI-powered PropTech solutions that empower developers, agencies, and agents to achieve unprecedented growth.",
+    "platformLinks": [
+      "ERP/CRM Platform",
+      "3D Property Tours",
+      "AI Assistant",
+      "Digital Documentation",
+      "Analytics Dashboard",
+      "Property Management System"
+    ],
+    "companyLinks": ["About Us", "Partner Program"],
+    "resourceLinks": ["Help Center", "Video Tutorials", "Blog"],
+    "legalLinks": ["Privacy Policy", "Terms of Service"],
+    "email_placeholder": "Enter your email",
+    "placeholder_email": "* Weekly updates for your better finance management",
+    "copyright1": "© 2025 Tentatics, All Right Reserved",
+    "copyright2": "All Systems Operational",
+    "location": "Headquarters",
+    "phone_support": "24/7 Support",
+    "mail_support": "Email Support"
+  }
+}

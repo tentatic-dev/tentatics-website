@@ -8,7 +8,7 @@ import Discover from "@/components/home/discover";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen mx-auto">
       <Navbar />
       <Banner />
       <Review />

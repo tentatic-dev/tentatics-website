@@ -10,6 +10,9 @@ import {
   GoogleTagManagerNoScript,
 } from "@/components/analytics";
 import Footer from "@/components/footer";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,13 +26,20 @@ export const metadata: Metadata = generateSEO({
   url: `${siteConfig.url}`,
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en" data-theme="light">
+    <html lang={locale} data-theme="light">
       <head>
         <GoogleTagManager />
         <script
@@ -47,8 +57,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         <GoogleTagManagerNoScript />
-        {children}
-        <Footer />
+        <NextIntlClientProvider>
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
         <GoogleAnalytics />
       </body>
     </html>

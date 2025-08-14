@@ -7,12 +7,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlinePlayCircle } from "react-icons/md";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useTranslations } from "next-intl";
 
 export default function Banner() {
   const bannerRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const exploreRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("home.banner");
 
   const imgs = [
     "/landing/landing-1.png",
@@ -81,20 +83,20 @@ export default function Banner() {
     <section
       ref={bannerRef}
       id="banner"
-      className="min-h-dvh w-full flex flex-col items-center justify-around px-6 pt-6 relative overflow-hidden"
+      className="md:min-h-screen relative overflow-hidden bg-primary-dark"
     >
-      <div></div>
-      <FadeSlider images={imgs} intervalMs={5000} fadeMs={800} />
-
-      <div className="flex text-white flex-col z-22 items-center gap-5">
+      <div className="p-5 md:px-0">
+        <FadeSlider images={imgs} intervalMs={5000} fadeMs={800} />
+      </div>
+      <div className="container mx-auto relative z-30 flex flex-col items-center justify-center md:min-h-screen order-2 md:order-1">
         <h1
           ref={titleRef}
-          className="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg text-gradient-highlight h-16"
+          className="text-2xl lg:text-5xl font-bold mb-6 drop-shadow-lg text-gradient-highlight h-auto md:h-16 text-center"
         >
-          Show Better. Sell Quicker. Manage Smarter.
+          {t("title")}
         </h1>
-        <div className="flex gap-8">
-          <div className="flex items-center gap-2">
+        <div className="flex gap-8 flex-wrap text-white justify-center">
+          <div className="flex items-center gap-2 ">
             <button
               className="border border-white/60 rounded-full p-3 bg-white/15 backdrop-blur-md"
               aria-label="360° View"
@@ -106,7 +108,7 @@ export default function Banner() {
                 height={24}
               />
             </button>
-            360 View
+            {t("360")}
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -115,7 +117,7 @@ export default function Banner() {
             >
               <Image src="/icons/3d.svg" alt="3D View" width={18} height={18} />
             </button>
-            3D Design
+            {t("3D")}
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -124,14 +126,14 @@ export default function Banner() {
             >
               <Image src="/icons/ai.svg" alt="AI" width={18} height={18} />
             </button>
-            AI-Supported
+            {t("AI")}
           </div>
         </div>
-        <div className="flex flex-col items-center gap-3">
-          <div className="relative">
+        <div className="flex flex-col items-center gap-3 mt-8">
+          <div className="relative w-[140%]">
             <textarea
-              className="textarea bg-white/15 backdrop-blur-md text-white rounded-2xl w-[581px] h-32 border-none outline-none resize-none pr-14 placeholder:text-white/70"
-              placeholder="Saya ingin menanyakan apa itu Tentatics....."
+              className="textarea bg-white/15 backdrop-blur-md text-white rounded-2xl w-full h-24 sm:h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base"
+              placeholder={t("placeholder")}
             ></textarea>
 
             <button
@@ -143,18 +145,21 @@ export default function Banner() {
             </button>
           </div>
 
-          <div ref={buttonsRef} className="flex flex-wrap gap-3">
+          <div
+            ref={buttonsRef}
+            className="flex flex-wrap flex-col md:flex-row gap-3 w-full"
+          >
             <button
               type="button"
-              className="rounded-full px-3 py-1 bg-[#f1f8a9] text-black/80 shadow text-sm"
+              className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center"
             >
-              Can you evaluate my listing now?
+              {t("question1")}
             </button>
             <button
               type="button"
-              className="rounded-full px-3 py-1 bg-[#f1f8a9] text-black/80 shadow text-sm"
+              className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center"
             >
-              How Tentatics help me sell faster?
+              {t("question2")}
             </button>
           </div>
         </div>
@@ -167,10 +172,10 @@ export default function Banner() {
             className="border border-white rounded-xl px-3 py-2 flex items-center gap-2 text-sm"
           >
             <MdOutlinePlayCircle className="h-6 w-6" />
-            Lihat Demo
+            {t("see")}
           </Link>
           <div className="flex flex-col items-center gap-2">
-            <p>Jelajahi Lebih Lanjut</p>
+            <p>{t("more")}</p>
             <button>
               <IoIosArrowDown className="w-6 h-6" />
             </button>

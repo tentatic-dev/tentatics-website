@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -12,22 +13,23 @@ export default function Solutions() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const productsRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("home.solution");
 
   const products = [
     {
       icon: "/icons/360_black.svg",
-      title: "360 Virtual Tour",
-      desc: "Immersive 360° property experiences that engage prospects and accelerate sales decisions.",
+      title: t("360.title"),
+      desc: t("360.desc"),
     },
     {
       icon: "/icons/ai_black.svg",
-      title: "AI Automation",
-      desc: "Intelligent agents that handle WhatsApp responses, lead assessment, and task scheduling",
+      title: t("ai.title"),
+      desc: t("ai.desc"),
     },
     {
       icon: "/icons/crm_black.svg",
-      title: "CRM Integration",
-      desc: "Seamless integration with leading CRM platforms for enhanced client management.",
+      title: t("crm.title"),
+      desc: t("crm.desc"),
     },
   ];
 
@@ -196,39 +198,48 @@ export default function Solutions() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="bg-white py-12 flex flex-col text-center gap-8 w-full justify-center"
-    >
-      <div className="flex gap-2 flex-col w-full">
-        <h1 ref={titleRef} className="text-3xl font-bold text-primary-dark">
-          Comprehensive Digital Solutions
-        </h1>
-        <p ref={subtitleRef} className="text-sm text-primary">
-          From virtual tours to AI automation, we provide everything you <br />
-          need for modern property management.
-        </p>
-      </div>
-      <div
-        ref={productsRef}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 px-16 md:px-32"
-      >
-        {products.map((product, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center cursor-pointer transition-all duration-300"
+    <section ref={sectionRef} className="bg-white py-14 sm:py-16">
+      <div className="container mx-auto flex flex-col justify-center text-center gap-8">
+        <div className="flex flex-col w-full">
+          <h1
+            ref={titleRef}
+            className="text-2xl sm:text-3xl font-bold text-primary-dark"
           >
-            <img
-              src={product.icon}
-              alt={product.title}
-              className="product-icon w-8 h-8 my-8"
-            />
-            <h2 className="product-title text-lg font-semibold text-primary-dark">
-              {product.title}
-            </h2>
-            <p className="product-desc text-sm w-64 mt-2">{product.desc}</p>
-          </div>
-        ))}
+            {t("title")}
+          </h1>
+          <p
+            ref={subtitleRef}
+            className="text-sm sm:text-base text-primary mt-2"
+          >
+            {t("desc")}
+            <br className="hidden sm:block" />
+            {t("desc2")}
+          </p>
+        </div>
+        <div
+          ref={productsRef}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6"
+        >
+          {products.map((product, i) => (
+            <div
+              key={i}
+              className="product-card flex flex-col items-center cursor-pointer transition-all duration-300 rounded-xl p-6 sm:p-7"
+            >
+              <img
+                src={product.icon}
+                alt={product.title}
+                className="product-icon w-8 h-8 my-8"
+                loading="lazy"
+              />
+              <h2 className="product-title text-lg sm:text-xl font-semibold text-primary-dark">
+                {product.title}
+              </h2>
+              <p className="product-desc text-sm max-w-xs mt-2 text-slate-700/90">
+                {product.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

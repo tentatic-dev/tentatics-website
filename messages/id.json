@@ -1,0 +1,149 @@
+{
+  "home": {
+    "banner": {
+      "title": "Tampil Baik. Jual Cepat. Kelola Lebih Pintar.",
+      "360": "Tampilan 360°",
+      "3D": "Desain 3D",
+      "AI": "Didukung AI",
+      "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
+      "question1": "Bisakah mengevaluasi daftar saya?",
+      "question2": "Bagaimana Tentatics membantu saya?",
+      "see": "Lihat Demo",
+      "more": "Jelajahi Lebih Lanjut"
+    },
+    "review": {
+      "title": "Membantu Pemimpin Industri Bertransformasi dengan Teknologi",
+      "desc": "Kami membantu bisnis tumbuh dengan solusi teknologi inovatif yang disesuaikan.",
+      "item": [
+        "Semua",
+        "Real estat",
+        "Agensi",
+        "Perhotelan",
+        "Kesehatan",
+        "Manufaktur",
+        "Pemerintah"
+      ],
+      "client": [
+        {
+          "value": "500+",
+          "desc": "Klien Puas(dummy)",
+          "numValue": 500
+        },
+        {
+          "value": "50+",
+          "desc": "Industri Berbeda (dummy)",
+          "numValue": 50
+        },
+        {
+          "value": "98%",
+          "desc": "Tingkat Kepuasan(dummy)",
+          "numValue": 98
+        },
+        {
+          "value": "24/7",
+          "desc": "Dukungan Teknis",
+          "numValue": 24
+        }
+      ]
+    },
+    "solution": {
+      "title": "Solusi Digital Komprehensif",
+      "desc": "Dari tur virtual hingga otomatisasi AI, kami menyediakan semua yang Anda",
+      "desc2": "butuhkan untuk manajemen properti modern.",
+      "360": {
+        "title": "Tampilan 360°",
+        "desc": "Pengalaman properti 360° yang imersif yang melibatkan prospek dan mempercepat keputusan penjualan."
+      },
+      "ai": {
+        "title": "Automasi AI",
+        "desc": "Agen cerdas yang menangani respons WhatsApp, penilaian prospek, dan penjadwalan tugas"
+      },
+      "crm": {
+        "title": "Integrasi CRM",
+        "desc": "Integrasi yang mulus dengan platform CRM terkemuka untuk manajemen klien yang lebih baik."
+      }
+    },
+    "project": {
+      "title": "Proyek Tentatics",
+      "desc": "Lihat bagaimana kami membantu klien kami mencapai tujuan mereka.",
+      "item": [
+        {
+          "image": "/projects/real-estate.jpg",
+          "title": "Real Estate",
+          "desc": "Rata-rata pengurangan waktu penyelesaian transaksi",
+          "url": "/real-estate",
+          "color": "#1736FF"
+        },
+        {
+          "image": "/projects/hospitality.jpg",
+          "title": "Perhotelan",
+          "desc": "Peningkatan interaksi pembeli dengan properti",
+          "url": "/hospitality",
+          "color": "#B917FF"
+        },
+        {
+          "image": "/projects/malls.jpg",
+          "title": "Pusat Perbelanjaan",
+          "desc": "Prospek lebih berkualitas melalui AI dan otomatisasi",
+          "url": "/shopping-mall",
+          "color": "#00A23B"
+        },
+        {
+          "image": "/projects/manufacturing.jpg",
+          "title": "Manufaktur",
+          "desc": "Penghematan operasional dan peningkatan efisiensi proses",
+          "url": "/manufacturing",
+          "color": "#87A200"
+        }
+      ]
+    },
+    "discover": {
+      "title": "Siap Menjelajah Proyek Inovatif",
+      "desc": "Terhubung dengan sesama pengembang dan inovator di seluruh Asia Tenggara untuk menjelajahi solusi PropTech terkini dan berbagi pengetahuan.",
+      "features": [
+        "Kolaborasi proyek open source",
+        "Konsultasi & bimbingan teknis",
+        "Workshop & pelatihan inovasi",
+        "Pengembangan berbasis komunitas"
+      ],
+      "schedule": "Jadwalkan Panggilan",
+      "card_title": "Sorotan Proyek",
+      "card_item": [
+        { "value": "25", "label": "Proyek Selesai (sample)" },
+        { "value": "15", "label": "Teknologi Digunakan (sample)" },
+        { "value": "3D", "label": "Visualisasi (sample)" },
+        { "value": "AI", "label": "Inovasi" }
+      ],
+      "testimony": "Proyek visualisasi 3D membuka kemungkinan baru untuk pameran properti.",
+      "testimony_person": "John Doe",
+      "testimony_location": "Jakarta"
+    }
+  },
+  "navbar": {
+    "business": "Pelanggan Kami",
+    "about": "Tentang Kami",
+    "blog": "Artikel",
+    "consultation": "Konsultasi dengan Kami"
+  },
+  "footer": {
+    "desc": "Merevolusi real estate di Asia Tenggara dengan solusi PropTech bertenaga AI yang memberdayakan pengembang, agensi, dan agen untuk mencapai pertumbuhan yang belum pernah terjadi sebelumnya.",
+    "platformLinks": [
+      "Platform ERP/CRM",
+      "Tur Properti 3D",
+      "Asisten AI",
+      "Dokumentasi Digital",
+      "Dashboard Analitik",
+      "Sistem Manajemen Properti"
+    ],
+    "companyLinks": ["Tentang Kami", "Program Mitra"],
+    "resourceLinks": ["Pusat Bantuan", "Video Tutorial", "Blog"],
+    "legalLinks": ["Kebijakan Privasi", "Syarat Layanan"],
+    "email_placeholder": "Masukkan email Anda",
+    "placeholder_email": "* Pembaruan mingguan untuk manajemen keuangan yang lebih baik",
+    "copyright1": "© 2025 Tentatics, Semua Hak Dilindungi",
+    "copyright2": "Semua Sistem Beroperasi",
+    "location": "Kantor Pusat",
+    "phone_support": "24/7 Support",
+    "mail_support": "Dukungan Email"
+  }
+}

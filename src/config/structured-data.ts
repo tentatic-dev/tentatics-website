@@ -31,7 +31,7 @@ export const personJsonLd = {
   name: siteConfig.author,
   url: siteConfig.url,
   description: siteConfig.description,
-  jobTitle: 'Professional Photographer & Videographer',
+  jobTitle: 'Company Profile, Tentatics',
   worksFor: {
     '@type': 'Organization',
     name: siteConfig.name,

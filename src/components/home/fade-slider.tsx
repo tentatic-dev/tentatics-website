@@ -51,10 +51,10 @@ export default function FadeSlider({
   const nextSrc = useMemo(() => images[nextIndex] ?? "", [images, nextIndex]);
 
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden">
-      <div className="absolute inset-0 bg-primary/60 z-20" />
+    <div className="relative md:absolute inset-0 h-[374px] w-full md:h-full overflow-hidden order-1 md:order-2 rounded-2xl md:rounded-none">
+      <div className="absolute inset-0 bg-primary/60 z-20 hidden md:block" />
       <div
-        className="absolute inset-0 z-[10] pointer-events-none "
+        className="relative md:absolute inset-0 z-[10] pointer-events-none "
         style={{
           backgroundImage:
             "radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.3) 80%)",
@@ -92,7 +92,7 @@ export default function FadeSlider({
       />
 
       {/* Indicators */}
-      {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
         {images.map((_, i) => (
           <span
             key={i}
@@ -103,7 +103,7 @@ export default function FadeSlider({
             }`}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
