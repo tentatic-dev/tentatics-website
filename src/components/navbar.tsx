@@ -8,7 +8,11 @@ import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 
-export default function Navbar() {
+type NavbarProps = {
+  variant?: number; // Optional prop to handle different styles
+};
+
+export default function Navbar({ variant = 1 }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations("navbar");
@@ -86,7 +90,12 @@ export default function Navbar() {
                 <button
                   type="button"
                   tabIndex={0}
-                  className="btn btn-ghost btn-sm gap-2 py-5 rounded-lg text-white hover:bg-white/10 border border-white"
+                  className={[
+                    "btn btn-sm gap-2 py-5 rounded-lg shadow-none border-none ",
+                    variant === 2
+                      ? "bg-highlight text-primary-dark hover:bg-highlight/50"
+                      : "btn-ghost text-white border border-white hover:bg-white/10",
+                  ].join(" ")}
                 >
                   <BiGlobe className="text-lg" />
                   <span className="text-sm">{locale.toUpperCase()}</span>
@@ -117,7 +126,12 @@ export default function Navbar() {
             <li>
               <Link
                 href="/"
-                className="btn bg-accent-dark text-white text-sm font-normal rounded-lg px-4 xl:px-6 py-3 h-auto border-none shadow-none hover:bg-accent-dark/90 transition-colors flex items-center gap-1"
+                className={[
+                  "btn text-sm rounded-lg px-4 xl:px-6 py-3 h-auto border-none shadow-none transition-colors flex items-center gap-1",
+                  variant === 2
+                    ? "bg-highlight hover:bg-highlight/50 text-primary-dark"
+                    : "bg-accent-dark hover:bg-accent-dark/90 text-white",
+                ].join(" ")}
               >
                 <span>{t("consultation")}</span>
                 <IoIosArrowRoundForward className="text-xl" />
@@ -215,7 +229,12 @@ export default function Navbar() {
             <li className="pt-2">
               <Link
                 href="/"
-                className="btn bg-accent-dark text-white w-full border-none shadow-none hover:bg-accent-dark/90 transition-colors"
+                className={[
+                  "btn w-full border-none shadow-none transition-colors",
+                  variant === 2
+                    ? "bg-highlight hover:bg-highlight/90 text-primary"
+                    : "bg-accent-dark hover:bg-accent-dark/90 text-white",
+                ].join(" ")}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("consultation")} <IoIosArrowRoundForward />

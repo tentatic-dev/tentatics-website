@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen mx-auto">
+    <main className="min-h-screen mx-auto">
       <Navbar />
       <Banner />
       <Review />
@@ -16,6 +16,6 @@ export default function Home() {
       <Projects />
       <Discover />
       <Footer />
-    </div>
+    </main>
   );
 }
