@@ -281,5 +281,10 @@
     "placeholder": "I want to ask about Tentatics.....",
     "policy_privacy": "Policy & Privacy",
     "about_is": "About Us"
+  },
+  "not_found": {
+    "desc1": "Looks like you're lost.",
+    "desc2": "This page is not available yet.",
+    "go_back": "Go Back to Home"
   }
 }

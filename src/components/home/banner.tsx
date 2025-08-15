@@ -170,14 +170,14 @@ export default function Banner() {
           >
             <button
               type="button"
-              className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center"
+              className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center cursor-pointer"
               onClick={() => setTextareaValue(t("question1"))}
             >
               {t("question1")}
             </button>
             <button
               type="button"
-              className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center"
+              className="rounded-full px-3 py-2 bg-[#f1f8a9] text-black/80 shadow text-xs md:text-sm text-center cursor-pointer"
               onClick={() => setTextareaValue(t("question2"))}
             >
               {t("question2")}

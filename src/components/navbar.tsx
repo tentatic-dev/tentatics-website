@@ -10,10 +10,14 @@ import { useRouter, usePathname } from "next/navigation";
 
 type NavbarProps = {
   variant?: number; // Optional prop to handle different styles
+  notUseScroll?: boolean; // Optional prop to disable scroll effects
 };
 
-export default function Navbar({ variant = 1 }: NavbarProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
+export default function Navbar({
+  variant = 1,
+  notUseScroll = false,
+}: NavbarProps) {
+  const [isScrolled, setIsScrolled] = useState(notUseScroll ? true : false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations("navbar");
   const locale = useLocale();
@@ -21,20 +25,23 @@ export default function Navbar({ variant = 1 }: NavbarProps) {
   const pathname = usePathname();
 
   useEffect(() => {
+    if (notUseScroll) return;
+
     const onScroll = () => setIsScrolled(window.scrollY > 50 || isMenuOpen);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, [isMenuOpen]);
 
   const handleLanguageChange = (lang: string) => {
-    // Hapus locale dari pathname
     const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, "") || "/";
-    router.push(`/${lang}${pathWithoutLocale}`);
+    router.push(`/${lang}/${pathWithoutLocale}`);
   };
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
-    setIsScrolled(true);
+    if (!notUseScroll) {
+      setIsScrolled(true);
+    }
     if (typeof document !== "undefined") {
       document.body.style.overflow = !isMenuOpen ? "hidden" : "";
     }
@@ -50,7 +57,7 @@ export default function Navbar({ variant = 1 }: NavbarProps) {
       ].join(" ")}
     >
       <div className="container mx-auto navbar border-none shadow-none justify-around">
-        <div className="navbar-start">
+        <Link href="/" className="navbar-start">
           <Image
             src="/logo-tentatics-white.svg"
             alt="Tentatics logo"
@@ -59,25 +66,34 @@ export default function Navbar({ variant = 1 }: NavbarProps) {
             className="w-24 md:w-32 h-auto"
             priority
           />
-        </div>
+        </Link>
 
         {/* Desktop menu */}
         <div className="navbar-center hidden lg:flex">
           <ul className="items-center flex menu menu-horizontal gap-6 text-white">
             <li>
-              <a className="hover:text-highlight transition-colors text-base">
+              <Link
+                href="/business-customers"
+                className="hover:text-highlight transition-colors text-base"
+              >
                 {t("business")}
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-highlight transition-colors text-base">
+              <Link
+                href="/about-us"
+                className="hover:text-highlight transition-colors text-base"
+              >
                 {t("about")}
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-highlight transition-colors text-base">
+              <Link
+                href="/blog"
+                className="hover:text-highlight transition-colors text-base"
+              >
                 {t("blog")}
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -102,7 +118,7 @@ export default function Navbar({ variant = 1 }: NavbarProps) {
                 </button>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content menu bg-black/80 rounded-lg mt-2 px-3 xl:px-6 py-2 shadow z-[1] text-white min-w-[80px]"
+                  className="dropdown-content menu bg-black/80 rounded-lg mt-2 py-2 shadow z-[1] text-white"
                 >
                   <li>
                     <button
@@ -214,17 +230,28 @@ export default function Navbar({ variant = 1 }: NavbarProps) {
         <div className="bg-primary">
           <ul className="menu menu-vertical p-4 text-white space-y-2">
             <li>
-              <a className="hover:text-accent transition-colors">
+              <Link
+                href="/business-customers"
+                className="hover:text-accent transition-colors"
+              >
                 {t("business")}
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-accent transition-colors">
+              <Link
+                href="/about-us"
+                className="hover:text-accent transition-colors"
+              >
                 {t("about")}
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-accent transition-colors">{t("blog")}</a>
+              <Link
+                href="/blog"
+                className="hover:text-accent transition-colors"
+              >
+                {t("blog")}
+              </Link>
             </li>
             <li className="pt-2">
               <Link

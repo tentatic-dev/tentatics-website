@@ -277,6 +277,11 @@
     "phone_support": "24/7 Support",
     "mail_support": "Dukungan Email"
   },
+  "not_found": {
+    "desc1": "Sepertinya kamu tersesat .",
+    "desc2": "Halaman ini belum tersedia.",
+    "go_back": "Kembali ke Beranda"
+  },
   "chat": {
     "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
     "policy_privacy": "Kebijakan & Privasi",

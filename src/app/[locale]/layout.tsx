@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import { generateSEO } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { organizationJsonLd, websiteJsonLd } from "@/config/structured-data";
@@ -18,10 +18,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Metadata for the root layout add your page with specific SEO properties
 export const metadata: Metadata = generateSEO({
-  title: "Home",
-  description: `Explore the photography portfolio of ${siteConfig.author}. Professional photography showcasing various styles and moments captured with artistic vision.`,
+  title: "Tentatics",
+  description: "Welcome to Tentatics, your partner in digital transformation.",
   url: `${siteConfig.url}`,
 });
 
@@ -33,6 +32,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
