@@ -1,17 +1,19 @@
+import { useTranslations } from "next-intl";
 import { IoIosArrowRoundForward } from "react-icons/io";
 export default function GetToKnow() {
+  const t = useTranslations("about.get_to_know");
   return (
     <section className="container my-16">
-      <p className="text-primary">Get To know About Us</p>
+      <p className="text-primary">{t("pre_title")}</p>
       <h1 className="text-3xl sm:text-4xl font-bold text-primary-dark mb-5">
-        Our Expertise, Mission and Values
+        {t("title")}
       </h1>
       <p>
-        Apply now and become part of our dedicated team — benefit from exciting
+        {t("desc")}
         projects and excellent development opportunities.
       </p>
       <button className="mt-6 px-6 py-3 text-white rounded-lg bg-primary-dark flex items-center gap-2">
-        Join Us
+        {t("join_us")}
         <IoIosArrowRoundForward className="text-xl" />
       </button>
     </section>

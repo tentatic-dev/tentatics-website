@@ -1,7 +1,9 @@
 // src/components/about-us/what-define-us.tsx
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function WhatDefineUs() {
+  const t = useTranslations("about.what_define_us");
   return (
     // Tarik sedikit ke atas supaya “nyelip” rapi setelah Introducing
     <section className="-mt-12 md:-mt-32 relative z-20">
@@ -10,15 +12,10 @@ export default function WhatDefineUs() {
           {/* Text */}
           <div className="p-6 sm:p-10 text-white md:col-span-3 flex flex-col">
             <h3 className="text-3xl sm:text-4xl font-bold mb-4">
-              What Defines us
+              {t("title")}
             </h3>
             <p className="mb-4 text-base sm:text-lg font-light leading-relaxed">
-              At Tentatics, we believe that every property is more than just
-              real estate it’s a key business asset. That’s why we empower real
-              estate professionals and enterprises with clarity, efficiency, and
-              cutting-edge digital tools. By combining powerful technology with
-              a deep understanding of industry needs, we help our clients sell
-              faster, manage smarter, and grow stronger.
+              {t("desc")}
             </p>
           </div>
 

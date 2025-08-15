@@ -119,6 +119,46 @@
       "testimony_location": "Jakarta"
     }
   },
+  "about": {
+    "introducing": {
+      "title": "Introducing",
+      "desc": "The team behind Tentatics"
+    },
+    "what_define_us": {
+      "title": "What Defines Us",
+      "desc": "At Tentatics, we believe that every property is more than just real estate it’s a key business asset. That’s why we empower real estate professionals and enterprises with clarity, efficiency, and cutting-edge digital tools. By combining powerful technology with a deep understanding of industry needs, we help our clients sell faster, manage smarter, and grow stronger."
+    },
+    "get_to_know": {
+      "pre_title": "Get to Know Us",
+      "title": "Our Expertise, Mission and Values",
+      "desc": "Apply now and become part of our dedicated team — benefit from exciting  projects and excellent development opportunities.",
+      "join_us": "Join Us"
+    },
+    "testimony": {
+      "title": "Inheritance becomes decision confidence.",
+      "desc": "Tentatics is your digital companion for assessment, strategy, and implementation.",
+      "items": [
+        {
+          "name": "John Doe",
+          "position": "CEO",
+          "company": "Tech Innovations Inc.",
+          "message": "Tentatics has transformed the way we approach digital solutions."
+        },
+        {
+          "name": "Jane Smith",
+          "position": "CTO",
+          "company": "Innovatech Solutions",
+          "message": "The team's expertise is unmatched in the industry."
+        },
+        {
+          "name": "Alex Tan",
+          "position": "Product Lead",
+          "company": "NextWave",
+          "message": "Clear strategy, fast delivery — Tentatics is a reliable partner."
+        }
+      ]
+    }
+  },
   "navbar": {
     "business": "Business Customers",
     "about": "About us",

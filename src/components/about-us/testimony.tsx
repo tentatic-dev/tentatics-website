@@ -1,32 +1,18 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 
 export default function Testimony() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const t = useTranslations("about.testimony");
 
-  const testimony = [
-    {
-      name: "John Doe",
-      position: "CEO",
-      company: "Tech Innovations Inc.",
-      message:
-        "Tentatics has transformed the way we approach digital solutions.",
-    },
-    {
-      name: "Jane Smith",
-      position: "CTO",
-      company: "Innovatech Solutions",
-      message: "The team's expertise is unmatched in the industry.",
-    },
-    {
-      name: "Alex Tan",
-      position: "Product Lead",
-      company: "NextWave",
-      message:
-        "Clear strategy, fast delivery — Tentatics is a reliable partner.",
-    },
-  ];
+  const testimony = t.raw("items") as Array<{
+    name: string;
+    position: string;
+    company: string;
+    message: string;
+  }>;
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -60,12 +46,9 @@ export default function Testimony() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-dark mb-4">
-            Inheritance becomes decision confidence.
+            {t("title")}
           </h1>
-          <p className="text-sm sm:text-base text-primary-dark">
-            Tentatics is your digital companion for assessment, strategy, and
-            implementation.
-          </p>
+          <p className="text-sm sm:text-base text-primary-dark">{t("desc")}</p>
         </div>
 
         <div className="relative mx-auto">

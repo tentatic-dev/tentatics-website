@@ -119,6 +119,46 @@
       "testimony_location": "Jakarta"
     }
   },
+  "about": {
+    "introducing": {
+      "title": "Memperkenalkan",
+      "desc": "Tim di balik Tentatics"
+    },
+    "what_define_us": {
+      "title": "Apa yang Mendefinisikan Kami",
+      "desc": "Di Tentatics, kami percaya bahwa setiap properti lebih dari sekadar real estat ini adalah aset bisnis utama. Itulah sebabnya kami memberdayakan para profesional dan perusahaan real estat dengan kejelasan, efisiensi, dan alat digital mutakhir. Dengan menggabungkan teknologi canggih dengan pemahaman mendalam tentang kebutuhan industri, kami membantu klien kami menjual lebih cepat, mengelola lebih pintar, dan tumbuh lebih kuat."
+    },
+    "get_to_know": {
+      "pre_title": "Kenali Kami",
+      "title": "Keahlian, Misi, dan Nilai Kami",
+      "desc": "Lamar sekarang dan jadilah bagian dari tim kami yang berdedikasi — manfaatkan proyek-proyek menarik dan peluang pengembangan yang luar biasa.",
+      "join_us": "Bergabunglah dengan Kami"
+    },
+    "testimony": {
+      "title": "Warisan menjadi kepercayaan keputusan.",
+      "desc": "Tentatics adalah pendamping digital Anda untuk penilaian, strategi, dan implementasi.",
+      "items": [
+        {
+          "name": "John Doe",
+          "position": "CEO",
+          "company": "Tech Innovations Inc.",
+          "message": "Tentatics telah mengubah cara kami mendekati solusi digital."
+        },
+        {
+          "name": "Jane Smith",
+          "position": "CTO",
+          "company": "Innovatech Solutions",
+          "message": "Keahlian tim tidak tertandingi di industri ini."
+        },
+        {
+          "name": "Alex Tan",
+          "position": "Pemimpin Produk",
+          "company": "NextWave",
+          "message": "Strategi yang jelas, pengiriman cepat — Tentatics adalah mitra yang dapat diandalkan."
+        }
+      ]
+    }
+  },
   "navbar": {
     "business": "Pelanggan Kami",
     "about": "Tentang Kami",
