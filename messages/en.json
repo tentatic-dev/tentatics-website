@@ -119,6 +119,97 @@
       "testimony_location": "Jakarta"
     }
   },
+  "business_customers": {
+    "banner": {
+      "title": "Empower Your Business with Smart Property Solutions",
+      "desc": "Tailored digital tools for agencies, developers, and enterprises to scale faster and smarter.",
+      "features": [
+        "Open source project collaboration",
+        "Technical consultation & guidance",
+        "Innovation workshops & training",
+        "Community-based development"
+      ],
+      "schedule": "Schedule a Consultation"
+    },
+    "help": [
+      {
+        "image": "/icons/shutdown.svg",
+        "title": "Powerful Tech, Real Results",
+        "desc": "Immersive tools that accelerate your sales process. From virtual tours to lead automation — we drive conversions."
+      },
+      {
+        "image": "/icons/save.svg",
+        "title": "Built to Fit Your Workflow",
+        "desc": "Seamless integration with your existing systems. From CRM to WhatsApp, everything in one unified dashboard."
+      },
+      {
+        "image": "/icons/human.svg",
+        "title": "Human-Focused Innovation",
+        "desc": "Tech that enhances — not replaces — your team. We empower your staff with tools to work smarter."
+      }
+    ],
+    "how": {
+      "title": "How it works with tentatics",
+      "desc": "Sell Quicker with Tentatics — Here's How",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Show Your Properties Smarter",
+          "desc": "We turn your listings into interactive 3D virtual tours and mobile-ready landing pages — no extra work needed."
+        },
+        {
+          "number": 2,
+          "title": "Automate Inquiries Instantly",
+          "desc": "Our AI handles WhatsApp chats, qualifies leads, and schedules follow-ups — so you never miss a potential buyer."
+        },
+        {
+          "number": 3,
+          "title": "Close Deals & Manage in One Place",
+          "desc": "Track leads, sales, documents, and legal processes via our all-in-one CRM + ERP dashboard."
+        }
+      ]
+    },
+    "chat": {
+      "title": "Chat with Tentatics AI —",
+      "title2": "for Free",
+      "desc": "Powered by groq, real-time data, automation, and deep market insight.",
+      "placeholder": "I want to ask about Tentatics.....",
+      "question1": "Can you evaluate my listing?",
+      "question2": "How does Tentatics help me?"
+    },
+    "faq": {
+      "title": "FAQ",
+      "desc": "Questions that you may want to ask....",
+      "questions": [
+        {
+          "question": "Can Tentatics be used for second-hand or resale properties?",
+          "answer": "Absolutely. Tentatics supports both new developments and second-hand listings. You can showcase any property with immersive virtual tours and smart automation tools."
+        },
+        {
+          "question": "How does Tentatics ensure data security?",
+          "answer": "Tentatics prioritizes data security by implementing robust encryption protocols, regular security audits, and compliance with industry standards."
+        },
+        {
+          "question": "Can the system be customized?",
+          "answer": "Yes, Tentatics offers customization options to fit your specific business needs. Our team works closely with clients to tailor the platform for optimal performance."
+        },
+        {
+          "question": "Is Tentatics mobile-friendly?",
+          "answer": "Yes, Tentatics is designed to be mobile-friendly, ensuring that users can access and manage their properties on any device."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "full_name": "Full Name",
+      "email": "Email",
+      "message": "Message",
+      "who_this_service_for": "Who is this service for?",
+      "for_me": "For Me",
+      "for_my_company": "For My Company",
+      "request": "Request Free Quota"
+    }
+  },
   "about": {
     "introducing": {
       "title": "Introducing",

@@ -119,6 +119,97 @@
       "testimony_location": "Jakarta"
     }
   },
+  "business_customers": {
+    "banner": {
+      "title": "Empower Your Business with Smart Property Solutions",
+      "desc": "Tailored digital tools for agencies, developers, and enterprises to scale faster and smarter.",
+      "features": [
+        "Kolaborasi proyek open source",
+        "Konsultasi & bimbingan teknis",
+        "Workshop & pelatihan inovasi",
+        "Pengembangan berbasis komunitas"
+      ],
+      "schedule": "Jadwalkan Konsultasi"
+    },
+    "help": [
+      {
+        "image": "/icons/shutdown.svg",
+        "title": "Teknologi Canggih, Hasil Nyata",
+        "desc": "Alat imersif yang mempercepat proses penjualan Anda. Dari tur virtual hingga otomatisasi prospek — kami mendorong konversi."
+      },
+      {
+        "image": "/icons/save.svg",
+        "title": "Dibangun untuk Menyesuaikan Alur Kerja Anda",
+        "desc": "Integrasi yang mulus dengan sistem yang sudah ada. Dari CRM hingga WhatsApp, semuanya dalam satu dashboard terpadu."
+      },
+      {
+        "image": "/icons/human.svg",
+        "title": "Inovasi Berfokus pada Manusia",
+        "desc": "Teknologi yang meningkatkan — bukan menggantikan — tim Anda. Kami memberdayakan staf Anda dengan alat untuk bekerja lebih pintar."
+      }
+    ],
+    "how": {
+      "title": "Cara Kerja dengan Tentatics",
+      "desc": "Jual Lebih Cepat dengan Tentatics — Begini Caranya",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Tampilkan Properti Anda dengan Lebih Pintar",
+          "desc": "Kami mengubah daftar Anda menjadi tur virtual 3D interaktif dan halaman landing yang siap untuk mobile — tanpa pekerjaan tambahan."
+        },
+        {
+          "number": 2,
+          "title": "Otomatisasi Pertanyaan Secara Instan",
+          "desc": "AI kami menangani chat WhatsApp, memenuhi kualifikasi prospek, dan menjadwalkan tindak lanjut — sehingga Anda tidak pernah melewatkan pembeli potensial."
+        },
+        {
+          "number": 3,
+          "title": "Tutup Transaksi & Kelola dalam Satu Tempat",
+          "desc": "Lacak prospek, penjualan, dokumen, dan proses hukum melalui dashboard CRM + ERP kami yang serba ada."
+        }
+      ]
+    },
+    "chat": {
+      "title": "Chat dengan AI Tentatics —",
+      "title2": "Gratis",
+      "desc": "Didukung oleh groq, data real-time, otomatisasi, dan wawasan pasar yang mendalam.",
+      "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
+      "question1": "Bisakah mengevaluasi daftar saya?",
+      "question2": "Bagaimana Tentatics membantu saya?"
+    },
+    "faq": {
+      "title": "FAQ",
+      "desc": "Pertanyaan yang mungkin ingin Anda tanyakan....",
+      "questions": [
+        {
+          "question": "Bisakah Tentatics digunakan untuk properti bekas atau yang dijual kembali?",
+          "answer": "Tentu saja. Tentatics mendukung baik pengembangan baru maupun daftar properti bekas. Anda dapat menampilkan properti apa pun dengan tur virtual yang imersif dan alat otomatisasi pintar."
+        },
+        {
+          "question": "Bagaimana Tentatics memastikan keamanan data?",
+          "answer": "Tentatics memprioritaskan keamanan data dengan menerapkan protokol enkripsi yang kuat, audit keamanan rutin, dan kepatuhan terhadap standar industri."
+        },
+        {
+          "question": "Bisakah sistem disesuaikan?",
+          "answer": "Ya, Tentatics menawarkan opsi penyesuaian untuk memenuhi kebutuhan bisnis spesifik Anda. Tim kami bekerja sama dengan klien untuk menyesuaikan platform agar kinerjanya optimal."
+        },
+        {
+          "question": "Apakah Tentatics ramah seluler?",
+          "answer": "Ya, Tentatics dirancang untuk ramah seluler, memastikan pengguna dapat mengakses dan mengelola properti mereka di perangkat apa pun."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "full_name": "Nama Lengkap",
+      "email": "Email",
+      "message": "Pesan",
+      "who_this_service_for": "Siapa yang Dilayani oleh Layanan Ini?",
+      "for_me": "Untuk Saya",
+      "for_my_company": "Untuk Perusahaan Saya",
+      "request": "Kuota Permintaan Gratis"
+    }
+  },
   "about": {
     "introducing": {
       "title": "Memperkenalkan",
