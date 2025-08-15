@@ -145,5 +145,10 @@
     "location": "Headquarters",
     "phone_support": "24/7 Support",
     "mail_support": "Email Support"
+  },
+  "chat": {
+    "placeholder": "I want to ask about Tentatics.....",
+    "policy_privacy": "Policy & Privacy",
+    "about_is": "About Us"
   }
 }

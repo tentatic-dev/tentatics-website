@@ -145,5 +145,10 @@
     "location": "Kantor Pusat",
     "phone_support": "24/7 Support",
     "mail_support": "Dukungan Email"
+  },
+  "chat": {
+    "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
+    "policy_privacy": "Kebijakan & Privasi",
+    "about_is": "Tentang Kami"
   }
 }
