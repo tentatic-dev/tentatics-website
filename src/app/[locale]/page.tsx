@@ -3,8 +3,8 @@ import Banner from "@/components/home/banner";
 import Review from "@/components/home/review";
 import Solutions from "@/components/home/solutions";
 import Projects from "@/components/home/projects";
-import { siteConfig } from "@/config/site";
 import Discover from "@/components/home/discover";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <Solutions />
       <Projects />
       <Discover />
+      <Footer />
     </div>
   );
 }

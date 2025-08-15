@@ -9,7 +9,6 @@ import {
   GoogleTagManager,
   GoogleTagManagerNoScript,
 } from "@/components/analytics";
-import Footer from "@/components/footer";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -57,10 +56,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         <GoogleTagManagerNoScript />
-        <NextIntlClientProvider>
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <GoogleAnalytics />
       </body>
     </html>

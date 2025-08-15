@@ -82,3 +82,13 @@ body {
     max-width: 1536px;
   }
 }
+
+.mockup-window-inherit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-x: auto;
+    border-radius: var(--radius-box);
+    padding-top: calc(0.25rem * 5);
+}

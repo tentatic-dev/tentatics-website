@@ -8,6 +8,7 @@ import { MdOutlinePlayCircle } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 export default function Banner() {
   const bannerRef = useRef<HTMLElement>(null);
@@ -16,6 +17,7 @@ export default function Banner() {
   const exploreRef = useRef<HTMLDivElement>(null);
   const [textareaValue, setTextareaValue] = useState("");
   const t = useTranslations("home.banner");
+  const router = useRouter();
 
   const imgs = [
     "/landing/landing-1.png",
@@ -87,6 +89,12 @@ export default function Banner() {
     }
   };
 
+  const handleSendToChat = () => {
+    if (textareaValue.trim()) {
+      router.push(`/chat?q=${encodeURIComponent(textareaValue.trim())}`);
+    }
+  };
+
   return (
     <section
       ref={bannerRef}
@@ -140,7 +148,7 @@ export default function Banner() {
         <div className="flex flex-col items-center gap-3 mt-8">
           <div className="relative w-[140%]">
             <textarea
-              className="textarea bg-white/15 backdrop-blur-md text-white rounded-2xl w-full h-24 sm:h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base"
+              className="textarea bg-white/15 backdrop-blur-md text-white rounded-2xl w-full h-24 sm:h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base active:outline-none focus:outline-none"
               placeholder={t("placeholder")}
               value={textareaValue}
               onChange={(e) => setTextareaValue(e.target.value)}
@@ -148,6 +156,7 @@ export default function Banner() {
 
             <button
               type="button"
+              onClick={handleSendToChat}
               aria-label="Kirim"
               className="absolute right-3 bottom-3 bg-primary-dark rounded-full p-2 backdrop-blur-md text-white hover:bg-white/25 transition"
             >
