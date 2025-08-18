@@ -7,6 +7,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "./language-switch";
+import { usePathname } from "next/navigation";
 
 type NavbarProps = {
   variant?: number; // Optional prop to handle different styles
@@ -21,6 +22,7 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations("navbar");
   const locale = useLocale();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (notUseScroll) return;
@@ -69,7 +71,10 @@ export default function Navbar({
             <li>
               <Link
                 href="/business-customers"
-                className="hover:text-highlight transition-colors text-base"
+                className={[
+                  "hover:text-highlight transition-colors text-base",
+                  pathname === "/business-customers" ? "text-highlight" : "",
+                ].join(" ")}
               >
                 {t("business")}
               </Link>
@@ -77,7 +82,10 @@ export default function Navbar({
             <li>
               <Link
                 href="/about-us"
-                className="hover:text-highlight transition-colors text-base"
+                className={[
+                  "hover:text-highlight transition-colors text-base",
+                  pathname === "/about-us" ? "text-highlight" : "",
+                ].join(" ")}
               >
                 {t("about")}
               </Link>
@@ -85,7 +93,10 @@ export default function Navbar({
             <li>
               <Link
                 href="/blog"
-                className="hover:text-highlight transition-colors text-base"
+                className={[
+                  "hover:text-highlight transition-colors text-base",
+                  pathname === "/blog" ? "text-highlight" : "",
+                ].join(" ")}
               >
                 {t("blog")}
               </Link>
@@ -189,7 +200,7 @@ export default function Navbar({
       {/* Mobile menu */}
       <div
         className={[
-          "lg:hidden overflow-hidden origin-top transition-all duration-300",
+          "lg:hidden overflow-hidden origin-top -mt-2 transition-all duration-300",
           "absolute left-0 right-0 top-full",
           isMenuOpen
             ? "max-h-[80vh] opacity-100 translate-y-0"
@@ -201,7 +212,10 @@ export default function Navbar({
             <li>
               <Link
                 href="/business-customers"
-                className="hover:text-accent transition-colors"
+                className={[
+                  "hover:text-accent transition-colors",
+                  pathname === "/business-customers" ? "text-highlight" : "",
+                ].join(" ")}
               >
                 {t("business")}
               </Link>
@@ -209,7 +223,10 @@ export default function Navbar({
             <li>
               <Link
                 href="/about-us"
-                className="hover:text-accent transition-colors"
+                className={[
+                  "hover:text-accent transition-colors",
+                  pathname === "/about-us" ? "text-highlight" : "",
+                ].join(" ")}
               >
                 {t("about")}
               </Link>
@@ -217,7 +234,10 @@ export default function Navbar({
             <li>
               <Link
                 href="/blog"
-                className="hover:text-accent transition-colors"
+                className={[
+                  "hover:text-accent transition-colors",
+                  pathname === "/blog" ? "text-highlight" : "",
+                ].join(" ")}
               >
                 {t("blog")}
               </Link>

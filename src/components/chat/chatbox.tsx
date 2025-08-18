@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { useChat } from "./chat-provider";
+import Image from "next/image";
 
 export default function Chatbox() {
   const { messages, isLoading } = useChat();
@@ -174,10 +175,12 @@ export default function Chatbox() {
                   {msg.role != "user" && (
                     <div className="chat-image avatar">
                       <div className="w-10 rounded-full">
-                        <img
+                        <Image
                           alt="Foto profil sample"
                           src="/logo-tentatics.svg"
                           className="bg-white p-2"
+                          height={40}
+                          width={40}
                         />
                       </div>
                     </div>

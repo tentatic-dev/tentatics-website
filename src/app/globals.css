@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "@tailwindcss/typography";
 
 /* Change Your Plugin As You Want 
 for more information, visit https://daisyui.com/theme-generator/ */
@@ -92,3 +93,4 @@ body {
     border-radius: var(--radius-box);
     padding-top: calc(0.25rem * 5);
 }
+
