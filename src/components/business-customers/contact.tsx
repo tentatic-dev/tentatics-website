@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FiArrowUpRight } from "react-icons/fi";
 import { usePathname } from "next/navigation";
+import { toast } from "react-toastify";
 
 type ServiceFor = "me" | "company";
 
@@ -42,7 +43,7 @@ export default function Contact() {
       console.log("submit:", data);
       form.reset();
       setServiceFor("me");
-      alert("Thanks! We'll get back to you soon.");
+      toast.success("Thanks! We'll get back to you soon.");
     } finally {
       setLoading(false);
     }

@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Link from "next/link";
+
 export default function GetToKnow() {
   const t = useTranslations("about.get_to_know");
   return (
@@ -12,10 +14,13 @@ export default function GetToKnow() {
         {t("desc")}
         projects and excellent development opportunities.
       </p>
-      <button className="mt-6 px-6 py-3 text-white rounded-lg bg-primary-dark flex items-center gap-2">
+      <Link
+        href={{ pathname: "/business-customers", hash: "contact" }}
+        className="mt-6 px-6 py-3 text-white rounded-lg bg-primary-dark flex items-center gap-2 w-fit"
+      >
         {t("join_us")}
         <IoIosArrowRoundForward className="text-xl" />
-      </button>
+      </Link>
     </section>
   );
 }

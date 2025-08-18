@@ -11,9 +11,7 @@ export default function Section() {
         <hr className="border w-full " />
       </div>
 
-      <div className="flex items-center justify-center h-full">
-        <p className="text-lg sm:text-xl">Coming Soon</p>
-      </div>
+      <div className="flex items-center justify-center h-full"></div>
     </>
   );
 }

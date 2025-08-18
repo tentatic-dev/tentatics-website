@@ -7,6 +7,7 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { HiLocationMarker, HiPhone, HiMail } from "react-icons/hi";
 import { useTranslations } from "next-intl";
 import { siteConfig } from "@/config/site";
+import { toast } from "react-toastify";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -15,13 +16,26 @@ export default function Footer() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Newsletter signup:", email);
+    toast.success("Thank you for subscribing!");
     setEmail("");
   };
 
-  const platformLinks = t.raw("platformLinks") as string[];
-  const companyLinks = t.raw("companyLinks") as string[];
-  const resourceLinks = t.raw("resourceLinks") as string[];
-  const legalLinks = t.raw("legalLinks") as string[];
+  const platformLinks = t.raw("platformLinks") as Array<{
+    label: string;
+    url: string;
+  }>;
+  const companyLinks = t.raw("companyLinks") as Array<{
+    label: string;
+    url: string;
+  }>;
+  const resourceLinks = t.raw("resourceLinks") as Array<{
+    label: string;
+    url: string;
+  }>;
+  const legalLinks = t.raw("legalLinks") as Array<{
+    label: string;
+    url: string;
+  }>;
 
   const socialLinks = [
     {
@@ -149,7 +163,10 @@ function FooterList({
   className = "",
 }: {
   title: string;
-  items: string[];
+  items: Array<{
+    label: string;
+    url: string;
+  }>;
   className?: string;
 }) {
   return (
@@ -158,8 +175,11 @@ function FooterList({
       <ul className="space-y-3 text-gray-300 text-sm">
         {items.map((item, idx) => (
           <li key={idx}>
-            <Link href="#" className="hover:text-highlight transition-colors">
-              {item}
+            <Link
+              href={item.url}
+              className="hover:text-highlight transition-colors"
+            >
+              {item.label}
             </Link>
           </li>
         ))}

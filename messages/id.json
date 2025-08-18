@@ -268,17 +268,27 @@
   },
   "footer": {
     "desc": "Merevolusi real estate di Asia Tenggara dengan solusi PropTech bertenaga AI yang memberdayakan pengembang, agensi, dan agen untuk mencapai pertumbuhan yang belum pernah terjadi sebelumnya.",
-    "platformLinks": [
-      "Platform ERP/CRM",
-      "Tur Properti 3D",
-      "Asisten AI",
-      "Dokumentasi Digital",
-      "Dashboard Analitik",
-      "Sistem Manajemen Properti"
+    "companyLinks": [
+      { "label": "Tentang Kami", "url": "/about-us" },
+      { "label": "Program Mitra", "url": "/partner-program" }
     ],
-    "companyLinks": ["Tentang Kami", "Program Mitra"],
-    "resourceLinks": ["Pusat Bantuan", "Video Tutorial", "Blog"],
-    "legalLinks": ["Kebijakan Privasi", "Syarat Layanan"],
+    "platformLinks": [
+      { "label": "Platform ERP/CRM", "url": "/erp-crm" },
+      { "label": "Tur Properti 3D", "url": "/3d-tours" },
+      { "label": "Asisten AI", "url": "/chat" },
+      { "label": "Dokumentasi Digital", "url": "/digital-docs" },
+      { "label": "Dashboard Analitik", "url": "/analytics" },
+      { "label": "Sistem Manajemen Properti", "url": "/property-management" }
+    ],
+    "resourceLinks": [
+      { "label": "Pusat Bantuan", "url": "/help-center" },
+      { "label": "Video Tutorial", "url": "/video-tutorials" },
+      { "label": "Blog", "url": "/blog" }
+    ],
+    "legalLinks": [
+      { "label": "Kebijakan Privasi", "url": "/privacy-policy" },
+      { "label": "Syarat Layanan", "url": "/terms-of-service" }
+    ],
     "email_placeholder": "Masukkan email Anda",
     "placeholder_email": "* Pembaruan mingguan untuk manajemen keuangan yang lebih baik",
     "copyright1": "© 2025 Tentatics, Semua Hak Dilindungi",

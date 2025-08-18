@@ -268,17 +268,27 @@
   },
   "footer": {
     "desc": "Revolutionizing real estate across Southeast Asia with AI-powered PropTech solutions that empower developers, agencies, and agents to achieve unprecedented growth.",
-    "platformLinks": [
-      "ERP/CRM Platform",
-      "3D Property Tours",
-      "AI Assistant",
-      "Digital Documentation",
-      "Analytics Dashboard",
-      "Property Management System"
+    "companyLinks": [
+      { "label": "About Us", "url": "/about-us" },
+      { "label": "Partner Program", "url": "/partner-program" }
     ],
-    "companyLinks": ["About Us", "Partner Program"],
-    "resourceLinks": ["Help Center", "Video Tutorials", "Blog"],
-    "legalLinks": ["Privacy Policy", "Terms of Service"],
+    "platformLinks": [
+      { "label": "ERP/CRM Platform", "url": "/erp-crm" },
+      { "label": "3D Property Tours", "url": "/3d-tours" },
+      { "label": "AI Assistant", "url": "/chat" },
+      { "label": "Digital Documentation", "url": "/digital-docs" },
+      { "label": "Analytics Dashboard", "url": "/analytics" },
+      { "label": "Property Management System", "url": "/property-management" }
+    ],
+    "resourceLinks": [
+      { "label": "Help Center", "url": "/help-center" },
+      { "label": "Video Tutorials", "url": "/video-tutorials" },
+      { "label": "Blog", "url": "/blog" }
+    ],
+    "legalLinks": [
+      { "label": "Privacy Policy", "url": "/privacy-policy" },
+      { "label": "Terms of Service", "url": "/terms-of-service" }
+    ],
     "email_placeholder": "Enter your email",
     "placeholder_email": "* Weekly updates for your better finance management",
     "copyright1": "© 2025 Tentatics, All Right Reserved",
