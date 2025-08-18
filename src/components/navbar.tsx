@@ -6,7 +6,7 @@ import { BiGlobe } from "react-icons/bi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import LanguageSwitcher from "./language-switch";
 
 type NavbarProps = {
   variant?: number; // Optional prop to handle different styles
@@ -21,8 +21,6 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations("navbar");
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
 
   useEffect(() => {
     if (notUseScroll) return;
@@ -32,10 +30,7 @@ export default function Navbar({
     return () => window.removeEventListener("scroll", onScroll);
   }, [isMenuOpen]);
 
-  const handleLanguageChange = (lang: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, "") || "/";
-    router.push(`/${lang}/${pathWithoutLocale}`);
-  };
+  const handleLanguageChange = (lang: string) => {};
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -121,27 +116,14 @@ export default function Navbar({
                   className="dropdown-content menu bg-black/80 rounded-lg mt-2 py-2 shadow z-[1] text-white"
                 >
                   <li>
-                    <button
-                      className="hover:bg-white/20 rounded-md"
-                      onClick={() => handleLanguageChange("en")}
-                    >
-                      EN
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="hover:bg-white/20 rounded-md"
-                      onClick={() => handleLanguageChange("id")}
-                    >
-                      ID
-                    </button>
+                    <LanguageSwitcher />
                   </li>
                 </ul>
               </div>
             </li>
             <li>
               <Link
-                href="/"
+                href="/contact"
                 className={[
                   "btn text-sm rounded-lg px-4 xl:px-6 py-3 h-auto border-none shadow-none transition-colors flex items-center gap-1",
                   variant === 2
@@ -172,20 +154,7 @@ export default function Navbar({
               className="dropdown-content menu bg-black/80 rounded-lg mt-2 p-2 shadow z-[1] text-white min-w-[70px]"
             >
               <li>
-                <button
-                  className="hover:bg-white/20 rounded-md text-sm"
-                  onClick={() => handleLanguageChange("en")}
-                >
-                  EN
-                </button>
-              </li>
-              <li>
-                <button
-                  className="hover:bg-white/20 rounded-md text-sm"
-                  onClick={() => handleLanguageChange("id")}
-                >
-                  ID
-                </button>
+                <LanguageSwitcher />
               </li>
             </ul>
           </div>
@@ -255,7 +224,7 @@ export default function Navbar({
             </li>
             <li className="pt-2">
               <Link
-                href="/"
+                href="/contact"
                 className={[
                   "btn w-full border-none shadow-none transition-colors",
                   variant === 2

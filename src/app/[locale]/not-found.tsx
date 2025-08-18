@@ -2,8 +2,6 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 import { generateSEO } from "@/lib/seo";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 
 export const metadata: Metadata = generateSEO({
   title: "404 - Page Not Found",

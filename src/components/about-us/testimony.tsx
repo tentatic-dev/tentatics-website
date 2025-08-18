@@ -14,13 +14,12 @@ export default function Testimony() {
     message: string;
   }>;
 
-  // Auto-scroll functionality
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === testimony.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [testimony.length]);

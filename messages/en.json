@@ -202,8 +202,11 @@
     "contact": {
       "title": "Contact Us",
       "full_name": "Full Name",
+      "full_name_placeholder": "Enter your full name",
       "email": "Email",
+      "email_placeholder": "Enter your email",
       "message": "Message",
+      "message_placeholder": "Enter your message",
       "who_this_service_for": "Who is this service for?",
       "for_me": "For Me",
       "for_my_company": "For My Company",
@@ -286,5 +289,12 @@
     "desc1": "Looks like you're lost.",
     "desc2": "This page is not available yet.",
     "go_back": "Go Back to Home"
+  },
+  "loading": {
+    "desc": "Loading, please wait..."
+  },
+  "coming-soon": {
+    "title": "Coming Soon",
+    "desc": "We're working hard to launch this page. Stay tuned!"
   }
 }

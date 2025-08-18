@@ -1,6 +1,7 @@
 // src/components/about-us/introducing.tsx
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const images = {
@@ -9,8 +10,18 @@ const images = {
 };
 
 const teamMembers = [
-  { name: "Miracle Ray", role: "Founder & CEO", image: images.miracleRay },
-  { name: "Peter Shaan", role: "Co Founder & CTO", image: images.peterShaan },
+  {
+    name: "Miracle Ray",
+    role: "Founder & CEO",
+    image: images.miracleRay,
+    link: "https://www.linkedin.com/in/christian-miracle-rumawung-8845b2207/",
+  },
+  {
+    name: "Peter Shaan",
+    role: "Co Founder & CTO",
+    image: images.peterShaan,
+    link: "https://www.linkedin.com/in/petershaan/",
+  },
 ];
 
 export default function Introducing() {
@@ -49,10 +60,14 @@ export default function Introducing() {
                 />
               </div>
 
-              <div className="flex items-center justify-between w-full mt-4">
+              <Link
+                href={member.link}
+                target="_blank"
+                className="flex  justify-between w-full mt-4"
+              >
                 <h5 className="font-bold text-xl text-white">{member.name}</h5>
                 <FiArrowUpRight className="text-highlight text-2xl" />
-              </div>
+              </Link>
               <p className="text-highlight text-left">{member.role}</p>
             </div>
           ))}

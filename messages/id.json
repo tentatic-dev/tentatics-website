@@ -202,8 +202,11 @@
     "contact": {
       "title": "Hubungi Kami",
       "full_name": "Nama Lengkap",
+      "full_name_placeholder": "Masukkan nama lengkap Anda",
       "email": "Email",
+      "email_placeholder": "Masukkan email Anda",
       "message": "Pesan",
+      "message_placeholder": "Masukkan pesan Anda",
       "who_this_service_for": "Siapa yang Dilayani oleh Layanan Ini?",
       "for_me": "Untuk Saya",
       "for_my_company": "Untuk Perusahaan Saya",
@@ -286,5 +289,12 @@
     "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
     "policy_privacy": "Kebijakan & Privasi",
     "about_is": "Tentang Kami"
+  },
+  "loading": {
+    "desc": "Sedang memuat, harap tunggu..."
+  },
+  "coming-soon": {
+    "title": "Segera Hadir",
+    "desc": "Kami sedang bekerja keras untuk meluncurkan halaman ini. Nantikan!"
   }
 }

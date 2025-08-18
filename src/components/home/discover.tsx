@@ -297,9 +297,9 @@ export default function Discover() {
 
           <Link
             ref={buttonRef}
-            href="/"
+            href={{ pathname: "/business-customers", hash: "contact" }}
             role="button"
-            className="btn bg-accent-dark mt-6 text-white text-sm font-medium rounded-lg px-4 xl:px-6 py-3 h-auto border-none shadow-none hover:bg-accent-dark/90 transition-colors inline-flex items-center gap-2 w-fit"
+            className="btn bg-accent-dark mt-6 text-white text-sm font-medium rounded-lg px-4 xl:px-6 py-3 h-auto border-none shadow-none hover:bg-accent-dark/90 transition-colors inline-flex items-center gap-2 w-full"
           >
             <GrSchedule aria-hidden className="text-base" />
             <span>{t("schedule")}</span>

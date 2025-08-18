@@ -95,14 +95,13 @@ export default function Projects() {
             ref={titleRef}
             className="text-white text-xl sm:text-3xl font-bold "
           >
-            Project of Tentatics
+            {t("title")}
           </h1>
           <p
             ref={subtitleRef}
             className="text-highlight font-light text-sm sm:text-base"
           >
-            See how property professionals elevate their business with
-            Tentatics.
+            {t("desc")}
           </p>
         </div>
 
