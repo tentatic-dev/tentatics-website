@@ -107,7 +107,7 @@ export default function Banner() {
       <div className="container mx-auto relative z-30 flex flex-col items-center justify-center md:min-h-screen order-2 md:order-1">
         <h1
           ref={titleRef}
-          className="text-2xl lg:text-5xl font-bold mb-6 drop-shadow-lg text-gradient-highlight h-auto md:h-16 text-center"
+          className="opacity-0 text-2xl lg:text-5xl font-bold mb-6 drop-shadow-lg text-gradient-highlight h-auto md:h-16 text-center"
         >
           {t("title")}
         </h1>
