@@ -19,7 +19,7 @@ export default function Banner() {
         className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block w-1/3 bg-[url('/about/pattern.svg')] bg-no-repeat bg-right bg-contain opacity-20"
       />
 
-      <div className="relative container mt-32 mb-28 mx-auto grid grid-cols-1 md:grid-cols-2 space-x-10 space-y-10 py-24 items-center px-16">
+      <div className="relative container mt-20 mb-28 mx-auto grid grid-cols-1 md:grid-cols-2 space-x-10 space-y-10 py-24 items-center px-16">
         <div className="flex justify-center md:justify-end">
           <Image
             src={"/landing-4.jpg"}

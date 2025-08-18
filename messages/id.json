@@ -253,6 +253,13 @@
       ]
     }
   },
+  "article": {
+    "title": "Jelajahi Artikel Terbaru Kami",
+    "desc": "Artikel Kami",
+    "placeholder": "Masukkan pencarian anda...",
+    "section-1": "Papan tulis itu luar biasa",
+    "feature": "Terbaru"
+  },
   "navbar": {
     "business": "Pelanggan Kami",
     "about": "Tentang Kami",

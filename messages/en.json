@@ -253,6 +253,13 @@
       ]
     }
   },
+  "article": {
+    "title": "Discover our latest news",
+    "desc": "Our Articles",
+    "placeholder": "Enter title articles...",
+    "section-1": "Whiteboards are remarkable",
+    "feature": "Feature"
+  },
   "navbar": {
     "business": "Business Customers",
     "about": "About us",

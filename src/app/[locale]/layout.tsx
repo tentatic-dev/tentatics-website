@@ -12,6 +12,7 @@ import {
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default async function RootLayout({
         <GoogleTagManagerNoScript />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <GoogleAnalytics />
+        <ToastContainer />
       </body>
     </html>
   );

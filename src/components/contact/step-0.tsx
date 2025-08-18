@@ -90,7 +90,7 @@ export default function Step0({
         <button
           type="button"
           disabled={!selected}
-          className="inline-flex items-center gap-2 rounded-lg bg-emerald-800 text-white px-5 py-2.5 disabled:opacity-50"
+          className="inline-flex items-center gap-2 rounded-full bg-emerald-800 text-white px-5 py-2.5 disabled:opacity-50"
           onClick={() => selected && onNext(selected)} // 4) kirim ke parent
         >
           Next <FiArrowRight />

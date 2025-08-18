@@ -38,7 +38,7 @@ export default function Step1({ onNext, onBack }: Props) {
       <p className="text-sm text-slate-600 mb-4">
         Please select your property type
       </p>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {options.map(({ key, title, subtitle, Icon }) => (
           <button
             key={key}
@@ -58,13 +58,13 @@ export default function Step1({ onNext, onBack }: Props) {
       </div>
 
       <div className="mt-6 flex justify-between ">
-        <button onClick={onBack} className="px-5 py-2 border rounded-lg">
+        <button onClick={onBack} className="px-5 py-2 border rounded-full">
           ← Back
         </button>
         <button
           disabled={!selected}
           onClick={() => onNext(selected!)}
-          className="bg-emerald-800 text-white px-5 py-2 rounded-lg disabled:opacity-50 flex items-center gap-2"
+          className="bg-emerald-800 text-white px-5 py-2 rounded-full disabled:opacity-50 flex items-center gap-2"
         >
           Next →
         </button>

@@ -19,18 +19,18 @@ export default function Step2({ onNext, onBack }: Props) {
       <textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className="w-full border rounded-lg p-3 h-32"
+        className="w-full border rounded-lg p-3 h-32 placeholder:text-gray-400"
         placeholder="Write your request here..."
       />
 
       <div className="mt-6 flex justify-between">
-        <button onClick={onBack} className="px-5 py-2 border rounded-lg">
+        <button onClick={onBack} className="px-5 py-2 border rounded-full">
           ← Back
         </button>
         <button
           disabled={!message}
           onClick={() => onNext(message)}
-          className="bg-emerald-800 text-white px-5 py-2 rounded-lg disabled:opacity-50 flex items-center gap-2"
+          className="bg-emerald-800 text-white px-5 py-2 rounded-full disabled:opacity-50 flex items-center gap-2"
         >
           Next →
         </button>

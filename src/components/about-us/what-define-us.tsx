@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function WhatDefineUs() {
   const t = useTranslations("about.what_define_us");
   return (
-    // Tarik sedikit ke atas supaya “nyelip” rapi setelah Introducing
     <section className="-mt-12 md:-mt-32 relative z-20">
       <div className="container mx-auto px-5">
         <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-5 items-stretch rounded-2xl overflow-hidden bg-accent shadow-xl ring-1 ring-black/5">

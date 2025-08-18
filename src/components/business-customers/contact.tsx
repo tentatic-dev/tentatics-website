@@ -190,7 +190,9 @@ function RadioOption({
         />
       </span>
       <span
-        className={muted && !checked ? "text-gray-400" : "text-primary-dark"}
+        className={`text-sm ${
+          muted && !checked ? "text-gray-400" : "text-primary-dark"
+        }`}
       >
         {label}
       </span>
