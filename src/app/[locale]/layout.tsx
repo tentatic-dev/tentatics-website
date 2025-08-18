@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/app/globals.css";
+import "./globals.css";
 import { generateSEO } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { organizationJsonLd, websiteJsonLd } from "@/config/structured-data";
