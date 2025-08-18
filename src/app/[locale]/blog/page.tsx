@@ -14,7 +14,7 @@ export const metadata: Metadata = generateSEO({
 export default function Page() {
   return (
     <main>
-      <Navbar />
+      <Navbar variant={2} />
       <Article />
       <Footer />
     </main>
