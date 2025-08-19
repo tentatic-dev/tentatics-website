@@ -131,7 +131,7 @@ export default function Banner() {
               className="border border-white/60 rounded-full p-3 bg-white/15 backdrop-blur-md"
               aria-label="3D View"
             >
-              <Image src="/icons/3d.svg" alt="3D View" width={18} height={18} />
+              <Image src="/icons/3D.svg" alt="3D View" width={18} height={18} />
             </button>
             {t("3D")}
           </div>
