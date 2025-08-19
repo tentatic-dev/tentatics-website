@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 import { ChatProvider } from "@/components/chat/chat-provider";
 import Chatbox from "@/components/chat/chatbox";
 import Textbox from "@/components/chat/textbox";
-import { useTranslations } from "next-intl";
+import Footer from "@/components/chat/footer";
 
 export const metadata: Metadata = generateSEO({
   title: "Chat with Us",
@@ -24,7 +24,6 @@ export default async function Page({
   const sendFlag =
     typeof resolvedParams.send === "string" ? resolvedParams.send : undefined;
   const autoSend = sendFlag === "1" || sendFlag === "true";
-  const t = useTranslations("chat");
 
   return (
     <ChatProvider initialQuery={q ?? null} autoSend={autoSend}>
@@ -49,19 +48,8 @@ export default async function Page({
         </div>
 
         <div className="fixed bottom-0 left-0 right-0 z-30 px-5 py-4">
-          <Textbox placeholder={t("placeholder")} />
-          <ul className="flex justify-center gap-10 items-center text-white font-light text-sm">
-            <li>
-              <Link href="/privacy" className="hover:text-highlight">
-                {t("policy_privacy")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-highlight">
-                {t("about_is")}
-              </Link>
-            </li>
-          </ul>
+          <Textbox />
+          <Footer />
         </div>
       </section>
     </ChatProvider>
