@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { JSX, useEffect, useRef } from "react";
 import { useChat } from "./chat-provider";
 import Image from "next/image";
 
@@ -45,7 +45,10 @@ export default function Chatbox() {
       } else {
         // If we were in a table and now we're not, render the table
         if (isInTable) {
-          elements.push(renderTable(tableRows, elements.length));
+          const tableElement = renderTable(tableRows, elements.length);
+          if (tableElement) {
+            elements.push(tableElement);
+          }
           isInTable = false;
           tableRows = [];
         }
@@ -87,7 +90,10 @@ export default function Chatbox() {
 
     // Handle table at the end
     if (isInTable && tableRows.length > 0) {
-      elements.push(renderTable(tableRows, elements.length));
+      const tableElement = renderTable(tableRows, elements.length);
+      if (tableElement) {
+        elements.push(tableElement);
+      }
     }
 
     return elements;

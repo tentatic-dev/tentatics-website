@@ -14,14 +14,15 @@ export const metadata: Metadata = generateSEO({
   url: `${siteConfig.url}/chat`,
 });
 
-export default function Page({
+export default async function Page({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const q = typeof searchParams.q === "string" ? searchParams.q : undefined;
+  const resolvedParams = await searchParams;
+  const q = typeof resolvedParams.q === "string" ? resolvedParams.q : undefined;
   const sendFlag =
-    typeof searchParams.send === "string" ? searchParams.send : undefined;
+    typeof resolvedParams.send === "string" ? resolvedParams.send : undefined;
   const autoSend = sendFlag === "1" || sendFlag === "true";
   const t = useTranslations("chat");
 
