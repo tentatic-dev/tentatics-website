@@ -106,7 +106,7 @@ export default function Introducing() {
           {t("desc")}
         </h2>
 
-        <div className="intro-grid grid grid-cols-2 gap-16 max-w-xl mx-auto">
+        <div className="intro-grid grid md:grid-cols-2 gap-16 max-w-xl mx-auto">
           {teamMembers.map((member) => (
             <div
               key={member.name}
@@ -129,7 +129,7 @@ export default function Introducing() {
                 className="flex justify-between w-full mt-4"
                 aria-label={`${member.name} LinkedIn`}
               >
-                <h5 className="font-bold text-xl text-white group-hover:text-highlight transition-colors">
+                <h5 className="font-bold text-xl text-white transition-colors">
                   {member.name}
                 </h5>
                 <FiArrowUpRight className="text-highlight text-2xl group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

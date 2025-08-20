@@ -47,7 +47,7 @@ export default function Page() {
       <Banner onSearch={handleSearch} isLoading={isLoading} />
       <section
         id="articles"
-        className="container mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-3 min-h-[90vh] gap-10"
+        className="container mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-10"
       >
         <div className="col-span-2">
           {isLoading ? (

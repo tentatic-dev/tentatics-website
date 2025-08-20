@@ -44,6 +44,13 @@ export default function Navbar({
     }
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    if (typeof document !== "undefined") {
+      document.body.style.overflow = "";
+    }
+  };
+
   return (
     <nav
       className={[
@@ -213,9 +220,10 @@ export default function Navbar({
               <Link
                 href="/business-customers"
                 className={[
-                  "hover:text-accent transition-colors",
+                  " transition-colors hover:text-highlight",
                   pathname === "/business-customers" ? "text-highlight" : "",
                 ].join(" ")}
+                onClick={closeMenu}
               >
                 {t("business")}
               </Link>
@@ -224,9 +232,10 @@ export default function Navbar({
               <Link
                 href="/about-us"
                 className={[
-                  "hover:text-accent transition-colors",
+                  " transition-colors hover:text-highlight",
                   pathname === "/about-us" ? "text-highlight" : "",
                 ].join(" ")}
+                onClick={closeMenu}
               >
                 {t("about")}
               </Link>
@@ -235,9 +244,10 @@ export default function Navbar({
               <Link
                 href="/blog"
                 className={[
-                  "hover:text-accent transition-colors",
+                  " transition-colors hover:text-highlight",
                   pathname === "/blog" ? "text-highlight" : "",
                 ].join(" ")}
+                onClick={closeMenu}
               >
                 {t("blog")}
               </Link>
@@ -246,12 +256,12 @@ export default function Navbar({
               <Link
                 href="/contact"
                 className={[
-                  "btn w-full border-none shadow-none transition-colors",
+                  "btn w-full border-none shadow-none transition-colors hover:text-highlight",
                   variant === 2
                     ? "bg-highlight hover:bg-highlight/90 text-primary"
                     : "bg-accent-dark hover:bg-accent-dark/90 text-white",
                 ].join(" ")}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 {t("consultation")} <IoIosArrowRoundForward />
               </Link>

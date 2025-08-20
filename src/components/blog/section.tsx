@@ -7,7 +7,7 @@ export default function Section({ posts }: { posts: Post[] }) {
   return (
     <>
       <div className="flex items-center justify-center gap-10">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 flex-shrink-0">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 lg:flex-shrink-0">
           {t("section-1")}
         </h1>
         <hr className="border w-full " />

@@ -40,7 +40,7 @@ export default function Banner({ onSearch, isLoading = false }: BannerProps) {
         className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block w-1/3 bg-[url('/about/pattern.svg')] bg-no-repeat bg-right bg-contain opacity-20"
       />
 
-      <div className="relative container mt-20 mx-auto space-y-10 py-24 px-16">
+      <div className="relative container mt-20 mx-auto space-y-10 py-16 md:py-24 px-16">
         <div>
           <div className="text-white text-center">
             <p className="text-base sm:text-lg mt-4 text-highlight">
@@ -54,9 +54,9 @@ export default function Banner({ onSearch, isLoading = false }: BannerProps) {
             </h2>
           </div>
         </div>
-        <div className="mx-auto w-fit">
+        <div className="mx-auto md:w-fit">
           <form onSubmit={handleSearch}>
-            <label className="input md:min-w-xl rounded-full flex items-center gap-2">
+            <label className="input w-full lg:min-w-xl rounded-full flex items-center gap-2">
               <svg
                 className={`h-[1em] opacity-50 ${
                   isLoading ? "animate-spin" : ""
@@ -76,6 +76,7 @@ export default function Banner({ onSearch, isLoading = false }: BannerProps) {
                 </g>
               </svg>
               <input
+                id="search"
                 type="search"
                 className="grow"
                 placeholder="Search articles..."

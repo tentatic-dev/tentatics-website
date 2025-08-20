@@ -29,6 +29,7 @@ export default function Textbox() {
   return (
     <div className="relative bottom-0 max-w-4xl mx-auto">
       <textarea
+        id="chat-input"
         className="w-full bg-white/15 backdrop-blur-md text-white rounded-2xl h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base focus:bg-white/20 transition-colors"
         placeholder={t("placeholder")}
         value={input}
