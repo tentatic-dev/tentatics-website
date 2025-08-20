@@ -13,11 +13,30 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const t = useTranslations("footer");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Newsletter signup:", email);
-    toast.success("Thank you for subscribing!");
-    setEmail("");
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Thank you for subscribing to our newsletter!");
+        setEmail("");
+      } else {
+        toast.error("Failed to subscribe. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error subscribing to newsletter:", error);
+      toast.error("An error occurred. Please try again.");
+    }
   };
 
   const platformLinks = t.raw("platformLinks") as Array<{

@@ -21,9 +21,32 @@ export default function Contact() {
   };
   const back = () => setStep((s) => Math.max(s - 1, 0));
 
-  const handleSubmit = (data: any) => {
-    console.log("Form submitted:", data);
-    toast.success("Form submitted successfully!");
+  const handleSubmit = async (data: any) => {
+    try {
+      console.log("Form submitted:", data);
+
+      // Kirim data ke API
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(
+          "Form submitted successfully! We'll get back to you soon."
+        );
+      } else {
+        toast.error("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An error occurred. Please try again.");
+    }
   };
   return (
     <div className="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch min-h-[400px]">

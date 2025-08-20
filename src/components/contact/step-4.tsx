@@ -16,6 +16,23 @@ export default function Step4({ onSubmit, onBack }: Props) {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("ID");
+
+  const getCountryPrefix = (code: string) => {
+    switch (code) {
+      case "ID":
+        return "+62";
+      case "US":
+        return "+1";
+      default:
+        return "+62";
+    }
+  };
+
+  const handleSubmit = () => {
+    const fullPhone = `${getCountryPrefix(countryCode)}${phone}`;
+    onSubmit({ firstName, lastName, email, phone: fullPhone });
+  };
 
   return (
     <div className="">
@@ -73,13 +90,17 @@ export default function Step4({ onSubmit, onBack }: Props) {
             Phone number <span className="text-red-500">*</span>
           </label>
           <div className="flex gap-2">
-            <select className="select select-bordered rounded-full px-4 w-24">
-              <option value="ID">ID</option>
-              <option value="US">US</option>
+            <select
+              className="select select-bordered rounded-full px-4 w-20"
+              value={countryCode}
+              onChange={(e) => setCountryCode(e.target.value)}
+            >
+              <option value="ID">🇮🇩 +62</option>
+              <option value="US">🇺🇸 +1</option>
             </select>
             <input
               type="tel"
-              placeholder="1234567"
+              placeholder="81234567890"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="input input-bordered flex-1 rounded-full px-6 py-3 text-base placeholder:text-gray-400 tabular-nums"
@@ -89,6 +110,10 @@ export default function Step4({ onSubmit, onBack }: Props) {
               required
             />
           </div>
+          <p className="text-xs text-gray-500 mt-1">
+            Full number: {getCountryPrefix(countryCode)}
+            {phone}
+          </p>
         </div>
       </div>
 
@@ -98,7 +123,7 @@ export default function Step4({ onSubmit, onBack }: Props) {
         </button>
         <button
           disabled={!firstName || !lastName || !email || !phone}
-          onClick={() => onSubmit({ firstName, lastName, email, phone })}
+          onClick={handleSubmit}
           className="btn btn-primary rounded-full px-8 disabled:opacity-50"
         >
           Submit →

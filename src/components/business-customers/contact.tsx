@@ -34,16 +34,27 @@ export default function Contact() {
       message: (form.elements.namedItem("message") as HTMLTextAreaElement)
         .value,
       serviceFor,
+      requestFreeQuota: true,
     };
 
     try {
       setLoading(true);
-      // TODO: ganti ke endpoint kamu
-      // await fetch("/api/contact", { method: "POST", body: JSON.stringify(data) });
-      console.log("submit:", data);
-      form.reset();
-      setServiceFor("me");
-      toast.success("Thanks! We'll get back to you soon.");
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Thanks! We'll get back to you soon.");
+      } else {
+        toast.error("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An error occurred. Please try again.");
     } finally {
       setLoading(false);
     }
