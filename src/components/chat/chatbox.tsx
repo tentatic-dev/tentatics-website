@@ -167,8 +167,8 @@ export default function Chatbox() {
 
   return (
     <main className="flex flex-col mx-auto h-full">
-      <div className="mockup-window-inherit w-4xl h-full">
-        <div className=" pb-8 overflow-auto flex-grow">
+      <div className="mockup-window-inherit md:w-4xl h-full">
+        <div className="pb-8 overflow-auto flex-grow">
           {messages.length != 0 && (
             <>
               {messages.map((msg, i) => (

@@ -18,10 +18,11 @@
         "All",
         "Real estate",
         "Agencies",
-        "Hospilaty",
-        "Helathcare",
-        "Manufactures",
-        "Government"
+        "Hospitality",
+        "Healthcare",
+        "Manufacturers",
+        "Government",
+        "Construction"
       ],
       "client": [
         {
@@ -281,7 +282,7 @@
       { "label": "Property Management System", "url": "/property-management" }
     ],
     "resourceLinks": [
-      { "label": "Help Center", "url": "/help-center" },
+      { "label": "Help Center", "url": "/contact" },
       { "label": "Video Tutorials", "url": "/video-tutorials" },
       { "label": "Blog", "url": "/blog" }
     ],

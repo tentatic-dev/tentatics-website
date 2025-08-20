@@ -12,7 +12,7 @@ export default function Footer() {
         </Link>
       </li>
       <li>
-        <Link href="/about" className="hover:text-highlight">
+        <Link href="/about-us" className="hover:text-highlight">
           {t("about_is")}
         </Link>
       </li>

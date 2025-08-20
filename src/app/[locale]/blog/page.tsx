@@ -43,7 +43,7 @@ export default function Page() {
 
   return (
     <main>
-      <Navbar />
+      <Navbar variant={2} />
       <Banner onSearch={handleSearch} isLoading={isLoading} />
       <section
         id="articles"

@@ -27,10 +27,10 @@ export default async function Page({
 
   return (
     <ChatProvider initialQuery={q ?? null} autoSend={autoSend}>
-      <section className="min-h-screen bg-primary-dark bg-[url('/landing/landing-1.png')] bg-cover bg-no-repeat bg-center flex flex-col">
+      <section className="h-screen bg-primary-dark bg-[url('/landing/landing-1.png')] bg-cover bg-no-repeat bg-center flex flex-col">
         <Link
           href={"/"}
-          className="bg-white/15 backdrop-blur py-5 fixed top-0 left-0 right-0 z-50"
+          className="bg-white/15 backdrop-blur py-5 fixed top-0 left-0 right-0 z-31"
         >
           <Image
             src="/logo-tentatics-white.svg"
@@ -43,7 +43,7 @@ export default async function Page({
         </Link>
         <div className="absolute inset-0 bg-primary/60 z-20" />
 
-        <div className="flex flex-col h-[68vh] relative z-30 mt-30">
+        <div className="flex flex-col relative z-30 h-full pt-14 md:pt-17 pb-36 overflow-y-auto px-6">
           <Chatbox />
         </div>
 

@@ -26,14 +26,16 @@ export default function Contact() {
     toast.success("Form submitted successfully!");
   };
   return (
-    <div className="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-      <Image
-        src="/landing/landing-2.png"
-        alt="Contact Us"
-        className="rounded-3xl object-cover w-full "
-        width={600}
-        height={400}
-      />
+    <div className="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch min-h-[400px]">
+      <div className="h-full flex items-center">
+        <Image
+          src="/landing/landing-2.png"
+          alt="Contact Us"
+          className="rounded-3xl object-cover w-full h-full"
+          width={600}
+          height={800}
+        />
+      </div>
 
       <div>
         {/* Progress */}
