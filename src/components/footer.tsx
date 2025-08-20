@@ -65,11 +65,7 @@ export default function Footer() {
       icon: <FaLinkedin className="text-2xl" />,
       href: siteConfig.social.linkedin,
     },
-    {
-      icon: <FaTwitter className="text-2xl" />,
-      href: siteConfig.social.twitter,
-    },
-    { icon: <FaFacebook className="text-2xl" />, href: "#" },
+    // { icon: <FaFacebook className="text-2xl" />, href: "#" },
     {
       icon: <FaInstagram className="text-2xl" />,
       href: siteConfig.social.instagram,

@@ -32,8 +32,8 @@ KEY VALUE PROPOSITIONS:
 
 CONTACT INFORMATION:
 📍 Jakarta, Indonesia (Headquarters)
-📞 +62 21 1234 5678 (24/7 Support)
-📧 hello@tentatics.com (Email Support)
+📞 +62 896-2110-9422 (24/7 Support)
+📧 contact@tentatics.com (Email Support)
 
 FREE CONSULTATION:
 - We offer free consultation for potential clients
