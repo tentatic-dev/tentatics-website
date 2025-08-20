@@ -60,7 +60,8 @@ export async function POST(request: NextRequest) {
 
     // Kirim email
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Tentatics Contact" <${process.env.CONTACT_EMAIL}>`, // contact@tentatics.com
+      replyTo: process.env.EMAIL_USER, // hello@tentatics.com
       to: "hello@tentatics.com",
       subject: subject,
       html: emailContent,

@@ -11,12 +11,14 @@ import { toast } from "react-toastify";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const t = useTranslations("footer");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const response = await fetch("/api/newsletter", {
         method: "POST",
         headers: {
@@ -36,6 +38,8 @@ export default function Footer() {
     } catch (error) {
       console.error("Error subscribing to newsletter:", error);
       toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -141,8 +145,9 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("email_placeholder")}
-                className="w-full px-4 py-3 rounded-full bg-white text-slate-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/30 mb-2"
+                className="w-full px-4 py-3 rounded-full bg-white text-slate-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/30 mb-2 disabled:opacity-50"
                 required
+                disabled={loading}
               />
               <p className="text-xs text-gray-300 italic">
                 {t("placeholder_email")}

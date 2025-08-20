@@ -61,17 +61,19 @@ export async function POST(request: NextRequest) {
     </div>
     `;
 
-    // Kirim email ke admin
+    // Kirim email ke admin dengan FROM newsletter@tentatics.com
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Tentatics Newsletter" <${process.env.NEWSLETTER_EMAIL}>`,
+      replyTo: process.env.EMAIL_USER,
       to: "hello@tentatics.com",
       subject: "New Newsletter Subscription",
       html: adminEmailContent,
     });
 
-    // Kirim welcome email ke subscriber
+    // Kirim welcome email ke subscriber dengan FROM newsletter@tentatics.com
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Tentatics Newsletter" <${process.env.NEWSLETTER_EMAIL}>`,
+      replyTo: process.env.EMAIL_USER,
       to: email,
       subject: "Welcome to Tentatics Newsletter!",
       html: welcomeEmailContent,

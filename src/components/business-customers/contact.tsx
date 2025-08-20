@@ -14,6 +14,10 @@ export default function Contact() {
   const [serviceFor, setServiceFor] = useState<ServiceFor>("me");
   const [loading, setLoading] = useState(false);
 
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const pathname = usePathname();
 
   useEffect(() => {
@@ -29,10 +33,9 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = {
-      fullName: (form.elements.namedItem("fullName") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement)
-        .value,
+      fullName,
+      email,
+      message,
       serviceFor,
       requestFreeQuota: true,
     };
@@ -49,6 +52,10 @@ export default function Contact() {
       const result = await response.json();
       if (result.success) {
         toast.success("Thanks! We'll get back to you soon.");
+        setFullName("");
+        setEmail("");
+        setMessage("");
+        setServiceFor("me");
       } else {
         toast.error("Failed to submit form. Please try again.");
       }
@@ -83,6 +90,8 @@ export default function Contact() {
               required
               placeholder={t("full_name_placeholder")}
               className="mt-1 w-full rounded-md border border-gray-300 bg-gray-100/50 px-4 py-3 outline-none focus:border-primary-dark"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
             />
 
             {/* Email */}
@@ -99,6 +108,8 @@ export default function Contact() {
               required
               placeholder={t("email_placeholder")}
               className="mt-1 w-full rounded-md border border-gray-300 bg-gray-100/50 px-4 py-3 outline-none focus:border-primary-dark"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             {/* Message */}
@@ -114,6 +125,8 @@ export default function Contact() {
               rows={4}
               placeholder={t("message_placeholder")}
               className="mt-1 w-full rounded-md border border-gray-300 bg-gray-100/50 px-4 py-3 outline-none focus:border-primary-dark"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
 
             {/* Radio: service for */}
