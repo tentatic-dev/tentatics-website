@@ -5,14 +5,14 @@ import Solutions from "@/components/home/solutions";
 import Projects from "@/components/home/projects";
 import Discover from "@/components/home/discover";
 import Footer from "@/components/footer";
-import { Metadata } from "next";
-import { generateSEO } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
+import { generateSEO } from "@/lib/seo";
+import { Metadata } from "next";
 
 export const metadata: Metadata = generateSEO({
   title: "Home",
-  description: `Tentatics - Your Partner in Digital Transformation`,
-  url: `${siteConfig.url}`,
+  description: "Show Better. Sell Quicker. Manage Smarter.",
+  url: `${siteConfig.url}/`,
 });
 
 export default function Home() {

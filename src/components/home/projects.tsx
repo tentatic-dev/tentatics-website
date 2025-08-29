@@ -93,7 +93,7 @@ export default function Projects() {
         <div className="flex flex-col gap-3">
           <h1
             ref={titleRef}
-            className="text-white text-xl sm:text-3xl font-bold "
+            className="text-white text-3xl sm:text-4xl font-bold "
           >
             {t("title")}
           </h1>

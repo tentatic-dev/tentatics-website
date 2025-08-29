@@ -11,13 +11,36 @@ import { toast } from "react-toastify";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const t = useTranslations("footer");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Newsletter signup:", email);
-    toast.success("Thank you for subscribing!");
-    setEmail("");
+
+    try {
+      setLoading(true);
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Thank you for subscribing to our newsletter!");
+        setEmail("");
+      } else {
+        toast.error("Failed to subscribe. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error subscribing to newsletter:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const platformLinks = t.raw("platformLinks") as Array<{
@@ -42,11 +65,7 @@ export default function Footer() {
       icon: <FaLinkedin className="text-2xl" />,
       href: siteConfig.social.linkedin,
     },
-    {
-      icon: <FaTwitter className="text-2xl" />,
-      href: siteConfig.social.twitter,
-    },
-    { icon: <FaFacebook className="text-2xl" />, href: "#" },
+    // { icon: <FaFacebook className="text-2xl" />, href: "#" },
     {
       icon: <FaInstagram className="text-2xl" />,
       href: siteConfig.social.instagram,
@@ -122,8 +141,9 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("email_placeholder")}
-                className="w-full px-4 py-3 rounded-full bg-white text-slate-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/30 mb-2"
+                className="w-full px-4 py-3 rounded-full bg-white text-slate-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/30 mb-2 disabled:opacity-50"
                 required
+                disabled={loading}
               />
               <p className="text-xs text-gray-300 italic">
                 {t("placeholder_email")}

@@ -16,12 +16,13 @@
       "desc": "Kami membantu bisnis tumbuh dengan solusi teknologi inovatif yang disesuaikan.",
       "item": [
         "Semua",
-        "Real estat",
+        "Real estate",
         "Agensi",
         "Perhotelan",
         "Kesehatan",
         "Manufaktur",
-        "Pemerintah"
+        "Pemerintah",
+        "Konstruksi"
       ],
       "client": [
         {
@@ -281,7 +282,7 @@
       { "label": "Sistem Manajemen Properti", "url": "/property-management" }
     ],
     "resourceLinks": [
-      { "label": "Pusat Bantuan", "url": "/help-center" },
+      { "label": "Pusat Bantuan", "url": "/contact" },
       { "label": "Video Tutorial", "url": "/video-tutorials" },
       { "label": "Blog", "url": "/blog" }
     ],
@@ -295,7 +296,7 @@
     "copyright2": "Semua Sistem Beroperasi",
     "location": "Kantor Pusat",
     "phone_support": "24/7 Support",
-    "mail_support": "Dukungan Email"
+    "mail_support": "Email Kontak"
   },
   "not_found": {
     "desc1": "Sepertinya kamu tersesat .",

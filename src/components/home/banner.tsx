@@ -131,7 +131,7 @@ export default function Banner() {
               className="border border-white/60 rounded-full p-3 bg-white/15 backdrop-blur-md"
               aria-label="3D View"
             >
-              <Image src="/icons/3d.svg" alt="3D View" width={18} height={18} />
+              <Image src="/icons/3D.svg" alt="3D View" width={18} height={18} />
             </button>
             {t("3D")}
           </div>
@@ -146,13 +146,14 @@ export default function Banner() {
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 mt-8">
-          <div className="relative w-[140%]">
+          <div className="relative md:w-[140%]">
             <textarea
+              id="chat-input"
               className="textarea bg-white/15 backdrop-blur-md text-white rounded-2xl w-full h-24 sm:h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base active:outline-none focus:outline-none"
               placeholder={t("placeholder")}
               value={textareaValue}
               onChange={(e) => setTextareaValue(e.target.value)}
-            ></textarea>
+            />
 
             <button
               type="button"

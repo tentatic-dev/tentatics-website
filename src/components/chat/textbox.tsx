@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useChat } from "./chat-provider";
+import { useTranslations } from "next-intl";
 
-export default function Textbox({ placeholder }: { placeholder: string }) {
+export default function Textbox() {
   const { input, setInput, send, isLoading } = useChat();
+  const t = useTranslations("chat");
 
   const handleSend = () => {
     send();
@@ -27,8 +29,9 @@ export default function Textbox({ placeholder }: { placeholder: string }) {
   return (
     <div className="relative bottom-0 max-w-4xl mx-auto">
       <textarea
+        id="chat-input"
         className="w-full bg-white/15 backdrop-blur-md text-white rounded-2xl h-32 border-none outline-none resize-none pr-14 p-4 placeholder:text-white/70 text-sm sm:text-base focus:bg-white/20 transition-colors"
-        placeholder={placeholder}
+        placeholder={t("placeholder")}
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}

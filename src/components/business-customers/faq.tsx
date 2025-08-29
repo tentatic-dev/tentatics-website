@@ -9,7 +9,7 @@ export default function FAQ() {
   }>;
 
   return (
-    <section id="faq" className="container py-7 sm:py-16 mx-auto">
+    <section id="faq" className="container py-16 mx-auto">
       <div className="text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-primary-dark">
           {t("title")}

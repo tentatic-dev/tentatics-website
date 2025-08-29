@@ -16,8 +16,8 @@ export default function Chat() {
     }
   };
   return (
-    <section id="chat" className="bg-primary-dark my-24 py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
+    <section id="chat" className="bg-primary-dark xl:my-24 py-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white">
             {t("title")} <span className="text-highlight">{t("title2")}</span>
