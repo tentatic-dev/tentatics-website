@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { sortPosts } from "@/lib/utils";
 import { useState, useMemo, useCallback } from "react";
+//
 
 export default function Page() {
   const [searchQuery, setSearchQuery] = useState("");
