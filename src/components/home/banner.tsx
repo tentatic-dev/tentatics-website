@@ -20,9 +20,11 @@ export default function Banner() {
   const router = useRouter();
 
   const imgs = [
-    "/landing/landing-1.png",
-    "/landing/landing-2.png",
-    "/landing/landing-3.png",
+    "/landing/industry.jpg",
+    "/landing/agroindustry.jpg",
+    "/landing/agriculture.jpg",
+    "/landing/shipping.jpg",
+    "/landing/manufacture.jpg",
   ];
 
   useEffect(() => {
@@ -115,32 +117,32 @@ export default function Banner() {
           <div className="flex items-center gap-2 ">
             <button
               className="border border-white/60 rounded-full p-3 bg-white/15 backdrop-blur-md"
-              aria-label="360° View"
+              aria-label=""
             >
               <Image
-                src="/icons/360.svg"
-                alt="360° View"
+                src="/icons/software.svg"
+                alt="Software Development"
                 width={24}
                 height={24}
               />
             </button>
-            {t("360")}
+            {t("Software")}
           </div>
           <div className="flex items-center gap-2">
             <button
               className="border border-white/60 rounded-full p-3 bg-white/15 backdrop-blur-md"
-              aria-label="3D View"
+              aria-label="System Integration"
             >
-              <Image src="/icons/3D.svg" alt="3D View" width={18} height={18} />
+              <Image src="/icons/integration.svg" alt="System Integration" width={18} height={18} />
             </button>
-            {t("3D")}
+            {t("Integration")}
           </div>
           <div className="flex items-center gap-2">
             <button
               className="border border-white/60 rounded-full p-3 bg-white/15 backdrop-blur-md"
-              aria-label="AI-Supported"
+              aria-label="AI Development"
             >
-              <Image src="/icons/ai.svg" alt="AI" width={18} height={18} />
+              <Image src="/icons/ai.svg" alt="AI Development" width={18} height={18} />
             </button>
             {t("AI")}
           </div>

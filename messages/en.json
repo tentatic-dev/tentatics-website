@@ -1,13 +1,13 @@
 {
   "home": {
     "banner": {
-      "title": "Show Better. Sell Quicker. Manage Smarter.",
-      "360": "360° View",
-      "3D": "3D Design",
-      "AI": "AI Supported",
+        "title": "Your trustworthy partner in digital transformation.",
+      "Software": "Software Development",
+      "Integration": "System Integration",
+      "AI": "AI Development",
       "placeholder": "I want to ask about Tentatics.....",
-      "question1": "Can you evaluate my listing now?",
-      "question2": "How Tentatics help me sell faster?",
+      "question1": "Can you help to grow my business?",
+      "question2": "How tentatics help me to transform digitally?",
       "see": "See Demo",
       "more": "Explore More"
     },
@@ -16,28 +16,29 @@
       "desc": "We help businesses grow with tailored, innovative technology solutions.",
       "item": [
         "All",
-        "Real estate",
-        "Agencies",
-        "Hospitality",
-        "Healthcare",
+        "Construction",
+        "Agroindustry",
+        "Shipping",
+        "Agriculture",
+        "Education",
         "Manufacturers",
         "Government",
-        "Construction"
+        "Factories"
       ],
       "client": [
         {
-          "value": "500+",
-          "desc": "Satisfy Client(dummy)",
-          "numValue": 500
+          "value": "14+",
+          "desc": "Satisfy Client",
+          "numValue": 14
         },
         {
-          "value": "50+",
-          "desc": "Different Industries (dummy)",
-          "numValue": 50
+          "value": "6+",
+          "desc": "Different Industries",
+          "numValue": 6
         },
         {
           "value": "98%",
-          "desc": "Satisfaction Rate (dummy)",
+          "desc": "Satisfaction Rate",
           "numValue": 98
         },
         {
@@ -49,19 +50,19 @@
     },
     "solution": {
       "title": "Comprehensive Digital Solutions",
-      "desc": "From virtual tours to AI automation, we provide everything you",
-      "desc2": "need for modern property management.",
-      "360": {
-        "title": "360 Virtual Tour",
-        "desc": "Immersive 360° property experiences that engage prospects and accelerate sales decisions."
+      "desc": "From system integration, software development, to AI powered tools, we provide end-to-end solutions",
+      "desc2": "for manage your business more efficiently.",
+      "software": {
+        "title": "Software Development",
+        "desc": "Tailored digital tools for business operations, and enterprises to scale faster and smarter."
+      },
+      "integration": {
+        "title": "System Integration",
+        "desc": "Integration with existing systems to streamline workflows and enhance productivity."
       },
       "ai": {
-        "title": "AI Automation",
-        "desc": "Intelligent agents that handle WhatsApp responses, lead assessment, and task scheduling"
-      },
-      "crm": {
-        "title": "CRM Integration",
-        "desc": "Seamless integration with leading CRM platforms for enhanced client management."
+        "title": "AI Powered Tools",
+        "desc": "Implement AI solutions to automate tasks, gain insights, and improve decision-making."
       }
     },
     "project": {
@@ -70,30 +71,30 @@
       "item": [
         {
           "image": "/projects/real-estate.jpg",
-          "title": "Real Estate",
-          "desc": "Average reduction in time to close deals",
+          "title": "Construction",
+          "desc": "Manage your development projects efficiently",
           "url": "/real-estate",
           "color": "#1736FF"
         },
         {
-          "image": "/projects/hospitality.jpg",
-          "title": "Hospitality",
-          "desc": "Increased buyer interaction with properties",
-          "url": "/hospitality",
+          "image": "/projects/agroindustry.jpg",
+          "title": "Agroindustry",
+          "desc": "Increase productivity with smart farming solutions",
+          "url": "/agroindustry",
           "color": "#B917FF"
         },
         {
-          "image": "/projects/malls.jpg",
-          "title": "Shopping Mall",
-          "desc": "Higher quality prospects through AI and automation",
-          "url": "/shopping-mall",
+          "image": "/projects/agriculture.jpg",
+          "title": "Agriculture",
+          "desc": "Higher quality yield with precision agriculture",
+          "url": "/agriculture",
           "color": "#00A23B"
         },
         {
-          "image": "/projects/manufacturing.jpg",
-          "title": "Manufacturing",
-          "desc": "Operational savings and process efficiency",
-          "url": "/manufacturing",
+          "image": "/projects/shipping.jpg",
+          "title": "Shipping",
+          "desc": "Optimization with advanced logistics solutions",
+          "url": "/shipping",
           "color": "#87A200"
         }
       ]
@@ -110,20 +111,20 @@
       "schedule": "Schedule a Call",
       "card_title": "Project Highlights",
       "card_item": [
-        { "value": "25", "label": "Completed Projects (sample)" },
-        { "value": "15", "label": "Technologies Used (sample)" },
-        { "value": "3D", "label": "Visualization (sample)" },
+        { "value": "14", "label": "Completed Projects" },
+        { "value": "15", "label": "Technologies Used" },
+        { "value": "SI", "label": "System Integration" },
         { "value": "AI", "label": "Innovation" }
       ],
-      "testimony": "3D visualization projects open new possibilities for property exhibitions.",
-      "testimony_person": "John Doe",
+      "testimony": "Software solutions delivered on time with excellent support.",
+      "testimony_person": "IT Consultant",
       "testimony_location": "Jakarta"
     }
   },
   "business_customers": {
     "banner": {
-      "title": "Empower Your Business with Smart Property Solutions",
-      "desc": "Tailored digital tools for agencies, developers, and enterprises to scale faster and smarter.",
+      "title": "Empower Your Business with Tentatics",
+      "desc": "Tailored digital tools for business operations, and enterprises to scale faster and smarter.",
       "features": [
         "Open source project collaboration",
         "Technical consultation & guidance",
@@ -151,22 +152,22 @@
     ],
     "how": {
       "title": "How it works with tentatics",
-      "desc": "Sell Quicker with Tentatics — Here's How",
+      "desc": "Manage Smart Business with Tentatics — Here's How",
       "steps": [
         {
           "number": 1,
-          "title": "Show Your Properties Smarter",
-          "desc": "We turn your listings into interactive 3D virtual tours and mobile-ready landing pages — no extra work needed."
+          "title": "Show Your Dashboards Report",
+          "desc": "We turn your dashboard into ready data for management and decision-making your business."
         },
         {
           "number": 2,
           "title": "Automate Inquiries Instantly",
-          "desc": "Our AI handles WhatsApp chats, qualifies leads, and schedules follow-ups — so you never miss a potential buyer."
+          "desc": "We implement AI-powered tools for your business to make more easy customer interactions."
         },
         {
           "number": 3,
-          "title": "Close Deals & Manage in One Place",
-          "desc": "Track leads, sales, documents, and legal processes via our all-in-one CRM + ERP dashboard."
+          "title": "Increase Business Performance",
+          "desc": "Track your business performance with real-time analytics and insights."
         }
       ]
     },
@@ -183,8 +184,8 @@
       "desc": "Questions that you may want to ask....",
       "questions": [
         {
-          "question": "Can Tentatics be used for second-hand or resale properties?",
-          "answer": "Absolutely. Tentatics supports both new developments and second-hand listings. You can showcase any property with immersive virtual tours and smart automation tools."
+          "question": "Can Tentatics help me to transform our paper based into paperless reporting?",
+          "answer": "Absolutely. Tentatics specializes in digital transformation, helping businesses transition from paper-based processes to efficient, paperless reporting systems."
         },
         {
           "question": "How does Tentatics ensure data security?",
@@ -221,7 +222,7 @@
     },
     "what_define_us": {
       "title": "What Defines Us",
-      "desc": "At Tentatics, we believe that every property is more than just real estate it’s a key business asset. That’s why we empower real estate professionals and enterprises with clarity, efficiency, and cutting-edge digital tools. By combining powerful technology with a deep understanding of industry needs, we help our clients sell faster, manage smarter, and grow stronger."
+      "desc": "At Tentatics, we are driven by a passion for innovation and a commitment to excellence. Our team of experts combines deep industry knowledge with cutting-edge technology to deliver solutions that empower businesses to thrive in the digital age."
     },
     "get_to_know": {
       "pre_title": "Get to Know Us",
@@ -268,18 +269,18 @@
     "consultation": "Consultation with Us"
   },
   "footer": {
-    "desc": "Revolutionizing real estate across Southeast Asia with AI-powered PropTech solutions that empower developers, agencies, and agents to achieve unprecedented growth.",
+    "desc": "Revolutionizing businesses through innovative technology solutions.",
     "companyLinks": [
       { "label": "About Us", "url": "/about-us" },
       { "label": "Partner Program", "url": "/partner-program" }
     ],
     "platformLinks": [
-      { "label": "ERP/CRM Platform", "url": "/erp-crm" },
-      { "label": "3D Property Tours", "url": "/3d-tours" },
+      { "label": "System Integration", "url": "/system-integration" },
+      { "label": "Software Development", "url": "/software-development" },
       { "label": "AI Assistant", "url": "/chat" },
       { "label": "Digital Documentation", "url": "/digital-docs" },
       { "label": "Analytics Dashboard", "url": "/analytics" },
-      { "label": "Property Management System", "url": "/property-management" }
+      { "label": "CRM System", "url": "/crm-system" }
     ],
     "resourceLinks": [
       { "label": "Help Center", "url": "/contact" },

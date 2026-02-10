@@ -1,43 +1,44 @@
 {
   "home": {
     "banner": {
-      "title": "Tampil Baik. Jual Cepat. Kelola Lebih Pintar.",
-      "360": "Tampilan 360°",
-      "3D": "Desain 3D",
-      "AI": "Didukung AI",
-      "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
-      "question1": "Bisakah mengevaluasi daftar saya?",
-      "question2": "Bagaimana Tentatics membantu saya?",
+      "title": "Mitra terpercaya Anda dalam transformasi digital.",
+      "Software": "Pengembangan Software",
+      "Integration": "Integrasi Sistem",
+      "AI": "Pengembangan AI",
+      "placeholder": "Saya ingin bertanya tentang Tentatics.....",
+      "question1": "Bisakah Anda membantu mengembangkan bisnis saya?",
+      "question2": "Bagaimana Tentatics membantu saya bertransformasi secara digital?",
       "see": "Lihat Demo",
       "more": "Jelajahi Lebih Lanjut"
     },
     "review": {
       "title": "Membantu Pemimpin Industri Bertransformasi dengan Teknologi",
-      "desc": "Kami membantu bisnis tumbuh dengan solusi teknologi inovatif yang disesuaikan.",
+      "desc": "Kami membantu bisnis berkembang dengan solusi teknologi inovatif yang disesuaikan.",
       "item": [
         "Semua",
-        "Real estate",
-        "Agensi",
-        "Perhotelan",
-        "Kesehatan",
+        "Konstruksi",
+        "Agroindustri",
+        "Pelayaran",
+        "Pertanian",
+        "Pendidikan",
         "Manufaktur",
         "Pemerintah",
-        "Konstruksi"
+        "Pabrik"
       ],
       "client": [
         {
-          "value": "500+",
-          "desc": "Klien Puas(dummy)",
-          "numValue": 500
+          "value": "14+",
+          "desc": "Klien Puas",
+          "numValue": 14
         },
         {
-          "value": "50+",
-          "desc": "Industri Berbeda (dummy)",
-          "numValue": 50
+          "value": "6+",
+          "desc": "Industri Berbeda",
+          "numValue": 6
         },
         {
           "value": "98%",
-          "desc": "Tingkat Kepuasan(dummy)",
+          "desc": "Tingkat Kepuasan",
           "numValue": 98
         },
         {
@@ -49,19 +50,19 @@
     },
     "solution": {
       "title": "Solusi Digital Komprehensif",
-      "desc": "Dari tur virtual hingga otomatisasi AI, kami menyediakan semua yang Anda",
-      "desc2": "butuhkan untuk manajemen properti modern.",
-      "360": {
-        "title": "Tampilan 360°",
-        "desc": "Pengalaman properti 360° yang imersif yang melibatkan prospek dan mempercepat keputusan penjualan."
+      "desc": "Dari integrasi sistem, pengembangan perangkat lunak, hingga alat bertenaga AI, kami menyediakan solusi end-to-end",
+      "desc2": "untuk mengelola bisnis Anda dengan lebih efisien.",
+      "software": {
+        "title": "Pengembangan Software",
+        "desc": "Alat digital yang disesuaikan untuk operasional bisnis, dan perusahaan untuk berkembang lebih cepat dan lebih cerdas."
+      },
+      "integration": {
+        "title": "Integrasi Sistem",
+        "desc": "Integrasi dengan sistem yang ada untuk merampingkan alur kerja dan meningkatkan produktivitas."
       },
       "ai": {
-        "title": "Automasi AI",
-        "desc": "Agen cerdas yang menangani respons WhatsApp, penilaian prospek, dan penjadwalan tugas"
-      },
-      "crm": {
-        "title": "Integrasi CRM",
-        "desc": "Integrasi yang mulus dengan platform CRM terkemuka untuk manajemen klien yang lebih baik."
+        "title": "Alat Bertenaga AI",
+        "desc": "Implementasikan solusi AI untuk mengotomatisasi tugas, mendapatkan wawasan, dan meningkatkan pengambilan keputusan."
       }
     },
     "project": {
@@ -70,36 +71,36 @@
       "item": [
         {
           "image": "/projects/real-estate.jpg",
-          "title": "Real Estate",
-          "desc": "Rata-rata pengurangan waktu penyelesaian transaksi",
+          "title": "Konstruksi",
+          "desc": "Kelola proyek pembangunan Anda secara efisien",
           "url": "/real-estate",
           "color": "#1736FF"
         },
         {
-          "image": "/projects/hospitality.jpg",
-          "title": "Perhotelan",
-          "desc": "Peningkatan interaksi pembeli dengan properti",
-          "url": "/hospitality",
+          "image": "/projects/agroindustry.jpg",
+          "title": "Agroindustri",
+          "desc": "Tingkatkan produktivitas dengan solusi pertanian cerdas",
+          "url": "/agroindustry",
           "color": "#B917FF"
         },
         {
-          "image": "/projects/malls.jpg",
-          "title": "Pusat Perbelanjaan",
-          "desc": "Prospek lebih berkualitas melalui AI dan otomatisasi",
-          "url": "/shopping-mall",
+          "image": "/projects/agriculture.jpg",
+          "title": "Pertanian",
+          "desc": "Hasil panen berkualitas lebih tinggi dengan pertanian presisi",
+          "url": "/agriculture",
           "color": "#00A23B"
         },
         {
-          "image": "/projects/manufacturing.jpg",
-          "title": "Manufaktur",
-          "desc": "Penghematan operasional dan peningkatan efisiensi proses",
-          "url": "/manufacturing",
+          "image": "/projects/shipping.jpg",
+          "title": "Pelayaran",
+          "desc": "Optimasi dengan solusi logistik canggih",
+          "url": "/shipping",
           "color": "#87A200"
         }
       ]
     },
     "discover": {
-      "title": "Siap Menjelajah Proyek Inovatif",
+      "title": "Siap Menjelajahi Proyek Inovatif",
       "desc": "Terhubung dengan sesama pengembang dan inovator di seluruh Asia Tenggara untuk menjelajahi solusi PropTech terkini dan berbagi pengetahuan.",
       "features": [
         "Kolaborasi proyek open source",
@@ -110,20 +111,20 @@
       "schedule": "Jadwalkan Panggilan",
       "card_title": "Sorotan Proyek",
       "card_item": [
-        { "value": "25", "label": "Proyek Selesai (sample)" },
-        { "value": "15", "label": "Teknologi Digunakan (sample)" },
-        { "value": "3D", "label": "Visualisasi (sample)" },
+        { "value": "14", "label": "Proyek Selesai" },
+        { "value": "15", "label": "Teknologi Digunakan" },
+        { "value": "SI", "label": "Integrasi Sistem" },
         { "value": "AI", "label": "Inovasi" }
       ],
-      "testimony": "Proyek visualisasi 3D membuka kemungkinan baru untuk pameran properti.",
-      "testimony_person": "John Doe",
+      "testimony": "Solusi perangkat lunak dikirimkan tepat waktu dengan dukungan yang sangat baik.",
+      "testimony_person": "Konsultan IT",
       "testimony_location": "Jakarta"
     }
   },
   "business_customers": {
     "banner": {
-      "title": "Empower Your Business with Smart Property Solutions",
-      "desc": "Tailored digital tools for agencies, developers, and enterprises to scale faster and smarter.",
+      "title": "Berdayakan Bisnis Anda dengan Tentatics",
+      "desc": "Alat digital yang disesuaikan untuk operasional bisnis, dan perusahaan untuk berkembang lebih cepat dan lebih cerdas.",
       "features": [
         "Kolaborasi proyek open source",
         "Konsultasi & bimbingan teknis",
@@ -151,30 +152,30 @@
     ],
     "how": {
       "title": "Cara Kerja dengan Tentatics",
-      "desc": "Jual Lebih Cepat dengan Tentatics — Begini Caranya",
+      "desc": "Kelola Bisnis Cerdas dengan Tentatics — Begini Caranya",
       "steps": [
         {
           "number": 1,
-          "title": "Tampilkan Properti Anda dengan Lebih Pintar",
-          "desc": "Kami mengubah daftar Anda menjadi tur virtual 3D interaktif dan halaman landing yang siap untuk mobile — tanpa pekerjaan tambahan."
+          "title": "Tampilkan Laporan Dashboard Anda",
+          "desc": "Kami mengubah dashboard Anda menjadi data siap pakai untuk manajemen dan pengambilan keputusan bisnis Anda."
         },
         {
           "number": 2,
           "title": "Otomatisasi Pertanyaan Secara Instan",
-          "desc": "AI kami menangani chat WhatsApp, memenuhi kualifikasi prospek, dan menjadwalkan tindak lanjut — sehingga Anda tidak pernah melewatkan pembeli potensial."
+          "desc": "Kami mengimplementasikan alat bertenaga AI bagi bisnis Anda untuk mempermudah interaksi pelanggan."
         },
         {
           "number": 3,
-          "title": "Tutup Transaksi & Kelola dalam Satu Tempat",
-          "desc": "Lacak prospek, penjualan, dokumen, dan proses hukum melalui dashboard CRM + ERP kami yang serba ada."
+          "title": "Tingkatkan Kinerja Bisnis",
+          "desc": "Lacak kinerja bisnis Anda dengan analitik dan wawasan waktu nyata."
         }
       ]
     },
     "chat": {
       "title": "Chat dengan AI Tentatics —",
       "title2": "Gratis",
-      "desc": "Didukung oleh groq, data real-time, otomatisasi, dan wawasan pasar yang mendalam.",
-      "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
+      "desc": "Didukung oleh groq, data waktu nyata, otomatisasi, dan wawasan pasar yang mendalam.",
+      "placeholder": "Saya ingin bertanya tentang Tentatics.....",
       "question1": "Bisakah mengevaluasi daftar saya?",
       "question2": "Bagaimana Tentatics membantu saya?"
     },
@@ -183,8 +184,8 @@
       "desc": "Pertanyaan yang mungkin ingin Anda tanyakan....",
       "questions": [
         {
-          "question": "Bisakah Tentatics digunakan untuk properti bekas atau yang dijual kembali?",
-          "answer": "Tentu saja. Tentatics mendukung baik pengembangan baru maupun daftar properti bekas. Anda dapat menampilkan properti apa pun dengan tur virtual yang imersif dan alat otomatisasi pintar."
+          "question": "Bisakah Tentatics membantu saya mengubah pelaporan berbasis kertas menjadi tanpa kertas?",
+          "answer": "Tentu saja. Tentatics berspesialisasi dalam transformasi digital, membantu bisnis beralih dari proses berbasis kertas ke sistem pelaporan tanpa kertas yang efisien."
         },
         {
           "question": "Bagaimana Tentatics memastikan keamanan data?",
@@ -211,7 +212,7 @@
       "who_this_service_for": "Siapa yang Dilayani oleh Layanan Ini?",
       "for_me": "Untuk Saya",
       "for_my_company": "Untuk Perusahaan Saya",
-      "request": "Kuota Permintaan Gratis"
+      "request": "Minta Kuota Gratis"
     }
   },
   "about": {
@@ -221,7 +222,7 @@
     },
     "what_define_us": {
       "title": "Apa yang Mendefinisikan Kami",
-      "desc": "Di Tentatics, kami percaya bahwa setiap properti lebih dari sekadar real estat ini adalah aset bisnis utama. Itulah sebabnya kami memberdayakan para profesional dan perusahaan real estat dengan kejelasan, efisiensi, dan alat digital mutakhir. Dengan menggabungkan teknologi canggih dengan pemahaman mendalam tentang kebutuhan industri, kami membantu klien kami menjual lebih cepat, mengelola lebih pintar, dan tumbuh lebih kuat."
+      "desc": "Di Tentatics, kami didorong oleh hasrat akan inovasi dan komitmen terhadap keunggulan. Tim ahli kami menggabungkan pengetahuan industri yang mendalam dengan teknologi mutakhir untuk memberikan solusi yang memberdayakan bisnis untuk berkembang di era digital."
     },
     "get_to_know": {
       "pre_title": "Kenali Kami",
@@ -255,16 +256,16 @@
     }
   },
   "article": {
-    "title": "Jelajahi Artikel Terbaru Kami",
+    "title": "Temukan berita terbaru kami",
     "desc": "Artikel Kami",
-    "placeholder": "Masukkan pencarian anda...",
+    "placeholder": "Masukkan judul artikel...",
     "section-1": "Papan tulis itu luar biasa",
-    "feature": "Terbaru"
+    "feature": "Fitur"
   },
   "navbar": {
-    "business": "Pelanggan Kami",
+    "business": "Pelanggan Bisnis",
     "about": "Tentang Kami",
-    "blog": "Artikel",
+    "blog": "Blog",
     "consultation": "Konsultasi dengan Kami"
   },
   "footer": {
@@ -274,12 +275,12 @@
       { "label": "Program Mitra", "url": "/partner-program" }
     ],
     "platformLinks": [
-      { "label": "Platform ERP/CRM", "url": "/erp-crm" },
-      { "label": "Tur Properti 3D", "url": "/3d-tours" },
+      { "label": "Integrasi Sistem", "url": "/system-integration" },
+      { "label": "Pengembangan Perangkat Lunak", "url": "/software-development" },
       { "label": "Asisten AI", "url": "/chat" },
       { "label": "Dokumentasi Digital", "url": "/digital-docs" },
       { "label": "Dashboard Analitik", "url": "/analytics" },
-      { "label": "Sistem Manajemen Properti", "url": "/property-management" }
+      { "label": "Sistem CRM", "url": "/crm-system" }
     ],
     "resourceLinks": [
       { "label": "Pusat Bantuan", "url": "/contact" },
@@ -298,15 +299,15 @@
     "phone_support": "24/7 Support",
     "mail_support": "Email Kontak"
   },
-  "not_found": {
-    "desc1": "Sepertinya kamu tersesat .",
-    "desc2": "Halaman ini belum tersedia.",
-    "go_back": "Kembali ke Beranda"
-  },
   "chat": {
-    "placeholder": "Saya ingin menanyakan tentang Tentatics.....",
+    "placeholder": "Saya ingin bertanya tentang Tentatics.....",
     "policy_privacy": "Kebijakan & Privasi",
     "about_is": "Tentang Kami"
+  },
+  "not_found": {
+    "desc1": "Sepertinya kamu tersesat.",
+    "desc2": "Halaman ini belum tersedia.",
+    "go_back": "Kembali ke Beranda"
   },
   "loading": {
     "desc": "Sedang memuat, harap tunggu..."

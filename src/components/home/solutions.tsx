@@ -17,19 +17,19 @@ export default function Solutions() {
 
   const products = [
     {
-      icon: "/icons/360_black.svg",
-      title: t("360.title"),
-      desc: t("360.desc"),
+      icon: "/icons/software_black.svg",
+      title: t("software.title"),
+      desc: t("software.desc"),
+    },
+    {
+      icon: "/icons/integration_black.svg",
+      title: t("integration.title"),
+      desc: t("integration.desc"),
     },
     {
       icon: "/icons/ai_black.svg",
       title: t("ai.title"),
       desc: t("ai.desc"),
-    },
-    {
-      icon: "/icons/crm_black.svg",
-      title: t("crm.title"),
-      desc: t("crm.desc"),
     },
   ];
 
