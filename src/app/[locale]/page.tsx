@@ -11,7 +11,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = generateSEO({
   title: "Home",
-  description: "Show Better. Sell Quicker. Manage Smarter.",
+  description: "Your trustworthy partner in digital transformation.",
   url: `${siteConfig.url}/`,
 });
 
