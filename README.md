@@ -1,6 +1,6 @@
 # Next.js 15 + DaisyUI + SEO + Analytics
 
-Template modern untuk developer dengan fitur lengkap SEO dan analytics.
+Template modern untuk developer dengan fitur lengkap SEO dan analytics. 
 
 ## 🚀 Features
 
